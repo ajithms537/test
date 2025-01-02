@@ -1,0 +1,5258 @@
+openapi: 3.0.0
+info:
+  title: Advertising
+  version: 12.0.0
+  description: >-
+    Develop the plan for and oversee advertising campaign activity, including
+    budget and resource management
+  contact:
+    name: BIAN
+    url: https://bian.org
+paths:
+  /Advertising/Create:
+    post:
+      tags:
+        - CR - AdvertisingCampaignManagementPlan
+      summary: CrCR Create and invoke the advertising campaign management plan
+      description: CrCR Create and invoke the advertising campaign management plan
+      operationId: Create
+      responses:
+        '200':
+          description: CreateAdvertisingCampaignManagementPlanResponse
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  AdvertisingCampaignManagementPlan:
+                    type: object
+                    properties:
+                      AdvertisingCampaignPortfolio:
+                        type: string
+                        description: "\r\n"
+                        format: string
+                      AdvertisingCampaignType:
+                        type: string
+                        description: "\r\n"
+                        format: string
+                      AdvertisingCampaignDescription:
+                        type: string
+                        description: "\r\n"
+                        format: string
+                      AdvertisingCampaignMetrics:
+                        type: string
+                        description: "\r\n"
+                        format: string
+                      AdvertisingCampaignMetricDefinition:
+                        type: string
+                        description: "\r\n"
+                        format: string
+                      AdvertisingCampaignPerformanceRecord:
+                        type: string
+                        description: "\r\n"
+                        format: string
+                      AdvertisingCampaignProcedureInstanceReference:
+                        type: string
+                        description: "\r\n"
+                        format: object
+                      AdvertisingCampaignExecutionPlan:
+                        type: string
+                        description: "\r\n"
+                        format: string
+                      EmployeeBusinessUnitReference:
+                        type: string
+                        description: "\r\n"
+                        format: object
+                      AdvertisingCampaignDuration:
+                        type: string
+                        description: "\r\n"
+                        format: string
+                description: >-
+                  Output: CrCR Create and invoke the advertising campaign
+                  management plan
+        '400':
+          description: BadRequest
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status_code:
+                    type: string
+                    format: string
+                  status:
+                    type: string
+                    format: string
+                  message:
+                    type: string
+                    format: string
+                description: Status Attributes
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status_code:
+                    type: string
+                    format: string
+                  status:
+                    type: string
+                    format: string
+                  message:
+                    type: string
+                    format: string
+                description: Status Attributes
+        '403':
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status_code:
+                    type: string
+                    format: string
+                  status:
+                    type: string
+                    format: string
+                  message:
+                    type: string
+                    format: string
+                description: Status Attributes
+        '404':
+          description: NotFound
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status_code:
+                    type: string
+                    format: string
+                  status:
+                    type: string
+                    format: string
+                  message:
+                    type: string
+                    format: string
+                description: Status Attributes
+        '429':
+          description: TooManyRequests
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status_code:
+                    type: string
+                    format: string
+                  status:
+                    type: string
+                    format: string
+                  message:
+                    type: string
+                    format: string
+                description: Status Attributes
+        '500':
+          description: InternalServerError
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status_code:
+                    type: string
+                    format: string
+                  status:
+                    type: string
+                    format: string
+                  message:
+                    type: string
+                    format: string
+                description: Status Attributes
+      requestBody:
+        description: Request body
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                AdvertisingCampaignManagementPlan:
+                  type: object
+                  properties:
+                    AdvertisingCampaignPortfolio:
+                      type: string
+                      description: "\r\n"
+                      format: string
+                    AdvertisingCampaignType:
+                      type: string
+                      description: "\r\n"
+                      format: string
+                    AdvertisingCampaignDescription:
+                      type: string
+                      description: "\r\n"
+                      format: string
+                    AdvertisingCampaignMetrics:
+                      type: string
+                      description: "\r\n"
+                      format: string
+                    AdvertisingCampaignMetricDefinition:
+                      type: string
+                      description: "\r\n"
+                      format: string
+                    AdvertisingCampaignPerformanceRecord:
+                      type: string
+                      description: "\r\n"
+                      format: string
+                    AdvertisingCampaignProcedureInstanceReference:
+                      type: string
+                      description: "\r\n"
+                      format: object
+                    AdvertisingCampaignExecutionPlan:
+                      type: string
+                      description: "\r\n"
+                      format: string
+                    EmployeeBusinessUnitReference:
+                      type: string
+                      description: "\r\n"
+                      format: object
+                    AdvertisingCampaignDuration:
+                      type: string
+                      description: "\r\n"
+                      format: string
+                    AdvertisingCampaignProcedureResult:
+                      type: string
+                      description: "\r\n"
+                      format: string
+              description: >-
+                Input: CrCR Create and invoke the advertising campaign
+                management plan
+  /Advertising/{advertisingid}/Update:
+    put:
+      tags:
+        - CR - AdvertisingCampaignManagementPlan
+      summary: UpCR Update details of the advertising campaign management plan
+      description: UpCR Update details of the advertising campaign management plan
+      operationId: Update
+      parameters:
+        - name: advertisingid
+          in: path
+          description: advertisingid parameter
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: AdvertisingCampaignManagementPlan
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  AdvertisingCampaignPortfolio:
+                    type: string
+                    description: >-
+                      The collection of advertising campaigns that is used to
+                      assess performance and coverage and direct development and
+                      execution activity
+                    format: string
+                  AdvertisingCampaignType:
+                    type: string
+                    description: >-
+                      The type of advertising campaign (e.g. media, mailshot,
+                      web-based)
+                    format: string
+                  AdvertisingCampaignDescription:
+                    type: string
+                    description: >-
+                      A description of the campaign that clarifies the content
+                      and media to be used in the advertising campaign and
+                      outlines the target audience
+                    format: string
+                  AdvertisingCampaignMetrics:
+                    type: string
+                    description: >-
+                      Metrics that are defined to assess the target and actual
+                      impact of the campaign
+                    format: string
+                  AdvertisingCampaignMetricDefinition:
+                    type: string
+                    description: >-
+                      A description of the metric, defining how it is to be
+                      measured in deployment
+                    format: string
+                  AdvertisingCampaignMetricGoal:
+                    type: string
+                    description: >-
+                      A description of the target performance for the metric
+                      that can be defined for different usage scenarios as
+                      appropriate
+                    format: string
+                  AdvertisingCampaignPerformanceRecord:
+                    type: string
+                    description: >-
+                      Maintains a record of the use and impact of the
+                      advertising campaign
+                    format: string
+                  AdvertisingCampaignProcedureInstanceReference:
+                    type: string
+                    description: Reference to the advertising campaign execution
+                    format: object
+                  AdvertisingCampaignExecutionPlan:
+                    type: string
+                    description: >-
+                      The execution plan for the advertising campaign, including
+                      external agencies employed, content development and
+                      execution tasks
+                    format: string
+                  EmployeeBusinessUnitReference:
+                    type: string
+                    description: >-
+                      Reference to the business unit responsible for the
+                      campaign execution
+                    format: object
+                  AdvertisingCampaignDuration:
+                    type: string
+                    description: The period over which the advertising is executed
+                    format: string
+                  AdvertisingCampaignProcedureResult:
+                    type: string
+                    description: >-
+                      The result/impact of the overall advertising campaign
+                      event (can refer to any detected up-tick in sales or
+                      servicing activity)
+                    format: string
+                description: >-
+                  Oversee the working of a business unit, assign work, manage
+                  against a plan and troubleshoot issues within Advertising.
+        '400':
+          description: BadRequest
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status_code:
+                    type: string
+                    format: string
+                  status:
+                    type: string
+                    format: string
+                  message:
+                    type: string
+                    format: string
+                description: Status Attributes
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status_code:
+                    type: string
+                    format: string
+                  status:
+                    type: string
+                    format: string
+                  message:
+                    type: string
+                    format: string
+                description: Status Attributes
+        '403':
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status_code:
+                    type: string
+                    format: string
+                  status:
+                    type: string
+                    format: string
+                  message:
+                    type: string
+                    format: string
+                description: Status Attributes
+        '404':
+          description: NotFound
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status_code:
+                    type: string
+                    format: string
+                  status:
+                    type: string
+                    format: string
+                  message:
+                    type: string
+                    format: string
+                description: Status Attributes
+        '429':
+          description: TooManyRequests
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status_code:
+                    type: string
+                    format: string
+                  status:
+                    type: string
+                    format: string
+                  message:
+                    type: string
+                    format: string
+                description: Status Attributes
+        '500':
+          description: InternalServerError
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status_code:
+                    type: string
+                    format: string
+                  status:
+                    type: string
+                    format: string
+                  message:
+                    type: string
+                    format: string
+                description: Status Attributes
+      requestBody:
+        description: Request body
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                AdvertisingCampaignPortfolio:
+                  type: string
+                  description: >-
+                    The collection of advertising campaigns that is used to
+                    assess performance and coverage and direct development and
+                    execution activity
+                  format: string
+                AdvertisingCampaignType:
+                  type: string
+                  description: >-
+                    The type of advertising campaign (e.g. media, mailshot,
+                    web-based)
+                  format: string
+                AdvertisingCampaignDescription:
+                  type: string
+                  description: >-
+                    A description of the campaign that clarifies the content and
+                    media to be used in the advertising campaign and outlines
+                    the target audience
+                  format: string
+                AdvertisingCampaignMetrics:
+                  type: string
+                  description: >-
+                    Metrics that are defined to assess the target and actual
+                    impact of the campaign
+                  format: string
+                AdvertisingCampaignMetricDefinition:
+                  type: string
+                  description: >-
+                    A description of the metric, defining how it is to be
+                    measured in deployment
+                  format: string
+                AdvertisingCampaignMetricGoal:
+                  type: string
+                  description: >-
+                    A description of the target performance for the metric that
+                    can be defined for different usage scenarios as appropriate
+                  format: string
+                AdvertisingCampaignPerformanceRecord:
+                  type: string
+                  description: >-
+                    Maintains a record of the use and impact of the advertising
+                    campaign
+                  format: string
+                AdvertisingCampaignProcedureInstanceReference:
+                  type: string
+                  description: Reference to the advertising campaign execution
+                  format: object
+                AdvertisingCampaignExecutionPlan:
+                  type: string
+                  description: >-
+                    The execution plan for the advertising campaign, including
+                    external agencies employed, content development and
+                    execution tasks
+                  format: string
+                EmployeeBusinessUnitReference:
+                  type: string
+                  description: >-
+                    Reference to the business unit responsible for the campaign
+                    execution
+                  format: object
+                AdvertisingCampaignDuration:
+                  type: string
+                  description: The period over which the advertising is executed
+                  format: string
+                AdvertisingCampaignProcedureResult:
+                  type: string
+                  description: >-
+                    The result/impact of the overall advertising campaign event
+                    (can refer to any detected up-tick in sales or servicing
+                    activity)
+                  format: string
+              description: >-
+                Oversee the working of a business unit, assign work, manage
+                against a plan and troubleshoot issues within Advertising.
+  /Advertising/{advertisingid}/Request:
+    put:
+      tags:
+        - CR - AdvertisingCampaignManagementPlan
+      summary: >-
+        RqCR Request manual intervention in the campaign plan (e.g. rework
+        campaign priorities)
+      description: >-
+        RqCR Request manual intervention in the campaign plan (e.g. rework
+        campaign priorities)
+      operationId: Request
+      parameters:
+        - name: advertisingid
+          in: path
+          description: advertisingid parameter
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: RequestAdvertisingCampaignManagementPlanResponse
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  AdvertisingCampaignManagementPlan:
+                    type: object
+                    properties:
+                      AdvertisingCampaignPortfolio:
+                        type: string
+                        description: "\r\n"
+                        format: string
+                      AdvertisingCampaignType:
+                        type: string
+                        description: "\r\n"
+                        format: string
+                      AdvertisingCampaignDescription:
+                        type: string
+                        description: "\r\n"
+                        format: string
+                      AdvertisingCampaignMetrics:
+                        type: string
+                        description: "\r\n"
+                        format: string
+                      AdvertisingCampaignMetricDefinition:
+                        type: string
+                        description: "\r\n"
+                        format: string
+                description: >-
+                  Output: RqCR Request manual intervention in the campaign plan
+                  (e.g. rework campaign priorities)
+        '400':
+          description: BadRequest
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status_code:
+                    type: string
+                    format: string
+                  status:
+                    type: string
+                    format: string
+                  message:
+                    type: string
+                    format: string
+                description: Status Attributes
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status_code:
+                    type: string
+                    format: string
+                  status:
+                    type: string
+                    format: string
+                  message:
+                    type: string
+                    format: string
+                description: Status Attributes
+        '403':
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status_code:
+                    type: string
+                    format: string
+                  status:
+                    type: string
+                    format: string
+                  message:
+                    type: string
+                    format: string
+                description: Status Attributes
+        '404':
+          description: NotFound
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status_code:
+                    type: string
+                    format: string
+                  status:
+                    type: string
+                    format: string
+                  message:
+                    type: string
+                    format: string
+                description: Status Attributes
+        '429':
+          description: TooManyRequests
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status_code:
+                    type: string
+                    format: string
+                  status:
+                    type: string
+                    format: string
+                  message:
+                    type: string
+                    format: string
+                description: Status Attributes
+        '500':
+          description: InternalServerError
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status_code:
+                    type: string
+                    format: string
+                  status:
+                    type: string
+                    format: string
+                  message:
+                    type: string
+                    format: string
+                description: Status Attributes
+      requestBody:
+        description: Request body
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                AdvertisingCampaignManagementPlan:
+                  type: object
+                  properties:
+                    AdvertisingCampaignPortfolio:
+                      type: string
+                      description: "\r\n"
+                      format: string
+                    AdvertisingCampaignType:
+                      type: string
+                      description: "\r\n"
+                      format: string
+                    AdvertisingCampaignDescription:
+                      type: string
+                      description: "\r\n"
+                      format: string
+                    AdvertisingCampaignMetrics:
+                      type: string
+                      description: "\r\n"
+                      format: string
+                    AdvertisingCampaignMetricDefinition:
+                      type: string
+                      description: "\r\n"
+                      format: string
+              description: >-
+                Input: RqCR Request manual intervention in the campaign plan
+                (e.g. rework campaign priorities)
+  /Advertising/{advertisingid}/Retrieve:
+    get:
+      tags:
+        - CR - AdvertisingCampaignManagementPlan
+      summary: ReCR Retrieve details about the advertising campaign management plan
+      description: ReCR Retrieve details about the advertising campaign management plan
+      operationId: Retrieve
+      parameters:
+        - name: advertisingid
+          in: path
+          description: advertisingid parameter
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: RetrieveAdvertisingCampaignManagementPlanResponse
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  AdvertisingCampaignManagementPlan:
+                    type: object
+                    properties:
+                      AdvertisingCampaignPortfolio:
+                        type: string
+                        description: "\r\n"
+                        format: string
+                      AdvertisingCampaignType:
+                        type: string
+                        description: "\r\n"
+                        format: string
+                      AdvertisingCampaignDescription:
+                        type: string
+                        description: "\r\n"
+                        format: string
+                      AdvertisingCampaignMetrics:
+                        type: string
+                        description: "\r\n"
+                        format: string
+                      AdvertisingCampaignMetricDefinition:
+                        type: string
+                        description: "\r\n"
+                        format: string
+                      AdvertisingCampaignMetricGoal:
+                        type: string
+                        description: "\r\n"
+                        format: string
+                      AdvertisingCampaignPerformanceRecord:
+                        type: string
+                        description: "\r\n"
+                        format: string
+                      AdvertisingCampaignProcedureInstanceReference:
+                        type: string
+                        description: "\r\n"
+                        format: object
+                      AdvertisingCampaignExecutionPlan:
+                        type: string
+                        description: "\r\n"
+                        format: string
+                      EmployeeBusinessUnitReference:
+                        type: string
+                        description: "\r\n"
+                        format: object
+                      AdvertisingCampaignDuration:
+                        type: string
+                        description: "\r\n"
+                        format: string
+                      AdvertisingCampaignProcedureResult:
+                        type: string
+                        description: "\r\n"
+                        format: string
+                description: >-
+                  Output: ReCR Retrieve details about the advertising campaign
+                  management plan
+        '400':
+          description: BadRequest
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status_code:
+                    type: string
+                    format: string
+                  status:
+                    type: string
+                    format: string
+                  message:
+                    type: string
+                    format: string
+                description: Status Attributes
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status_code:
+                    type: string
+                    format: string
+                  status:
+                    type: string
+                    format: string
+                  message:
+                    type: string
+                    format: string
+                description: Status Attributes
+        '403':
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status_code:
+                    type: string
+                    format: string
+                  status:
+                    type: string
+                    format: string
+                  message:
+                    type: string
+                    format: string
+                description: Status Attributes
+        '404':
+          description: NotFound
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status_code:
+                    type: string
+                    format: string
+                  status:
+                    type: string
+                    format: string
+                  message:
+                    type: string
+                    format: string
+                description: Status Attributes
+        '429':
+          description: TooManyRequests
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status_code:
+                    type: string
+                    format: string
+                  status:
+                    type: string
+                    format: string
+                  message:
+                    type: string
+                    format: string
+                description: Status Attributes
+        '500':
+          description: InternalServerError
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status_code:
+                    type: string
+                    format: string
+                  status:
+                    type: string
+                    format: string
+                  message:
+                    type: string
+                    format: string
+                description: Status Attributes
+  /Advertising/{advertisingid}/MarketTracking/{markettrackingid}/Update:
+    put:
+      tags:
+        - BQ - MarketTracking
+      summary: UpBQ Update details of the market tracking activity (e.g. change source)
+      description: UpBQ Update details of the market tracking activity (e.g. change source)
+      operationId: UpdateMarketTracking
+      parameters:
+        - name: advertisingid
+          in: path
+          description: advertisingid parameter
+          required: true
+          schema:
+            type: string
+        - name: markettrackingid
+          in: path
+          description: markettrackingid parameter
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: UpdateMarketTrackingResponse
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  MarketTracking:
+                    type: object
+                    properties:
+                      MarketTrackingWorkTaskType:
+                        type: string
+                        description: "\r\n"
+                        format: string
+                      GeneralMarketResearchDirectoryEntryInstanceReference:
+                        type: string
+                        description: "\r\n"
+                        format: object
+                      MarketTrackingWorkTaskWorkProducts:
+                        type: string
+                        description: "\r\n"
+                        format: string
+                      MarketTrackingWorkTaskResult:
+                        type: string
+                        description: "\r\n"
+                        format: string
+                      MarketTrackingWorkTaskDate-Time:
+                        type: object
+                        properties:
+                          DateContent:
+                            type: string
+                            description: ''
+                            format: string
+                        description: The date-time the market tracking task is performed
+                description: >-
+                  Output: UpBQ Update details of the market tracking activity
+                  (e.g. change source)
+        '400':
+          description: BadRequest
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status_code:
+                    type: string
+                    format: string
+                  status:
+                    type: string
+                    format: string
+                  message:
+                    type: string
+                    format: string
+                description: Status Attributes
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status_code:
+                    type: string
+                    format: string
+                  status:
+                    type: string
+                    format: string
+                  message:
+                    type: string
+                    format: string
+                description: Status Attributes
+        '403':
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status_code:
+                    type: string
+                    format: string
+                  status:
+                    type: string
+                    format: string
+                  message:
+                    type: string
+                    format: string
+                description: Status Attributes
+        '404':
+          description: NotFound
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status_code:
+                    type: string
+                    format: string
+                  status:
+                    type: string
+                    format: string
+                  message:
+                    type: string
+                    format: string
+                description: Status Attributes
+        '429':
+          description: TooManyRequests
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status_code:
+                    type: string
+                    format: string
+                  status:
+                    type: string
+                    format: string
+                  message:
+                    type: string
+                    format: string
+                description: Status Attributes
+        '500':
+          description: InternalServerError
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status_code:
+                    type: string
+                    format: string
+                  status:
+                    type: string
+                    format: string
+                  message:
+                    type: string
+                    format: string
+                description: Status Attributes
+      requestBody:
+        description: Request body
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                MarketTracking:
+                  type: object
+                  properties:
+                    MarketTrackingWorkTaskType:
+                      type: string
+                      description: "\r\n"
+                      format: string
+                    GeneralMarketResearchDirectoryEntryInstanceReference:
+                      type: string
+                      description: "\r\n"
+                      format: object
+                    MarketTrackingWorkTaskWorkProducts:
+                      type: string
+                      description: "\r\n"
+                      format: string
+                    MarketTrackingWorkTaskResult:
+                      type: string
+                      description: "\r\n"
+                      format: string
+                    MarketTrackingWorkTaskDate-Time:
+                      type: object
+                      properties:
+                        DateContent:
+                          type: string
+                          description: ''
+                          format: string
+                      description: The date-time the market tracking task is performed
+              description: >-
+                Input: UpBQ Update details of the market tracking activity (e.g.
+                change source)
+  /Advertising/{advertisingid}/MarketTracking/{markettrackingid}/Execute:
+    put:
+      tags:
+        - BQ - MarketTracking
+      summary: >-
+        ExBQ Execute an automated task for the tracking activity (e.g. upload
+        new data)
+      description: >-
+        ExBQ Execute an automated task for the tracking activity (e.g. upload
+        new data)
+      operationId: ExecuteMarketTracking
+      parameters:
+        - name: advertisingid
+          in: path
+          description: advertisingid parameter
+          required: true
+          schema:
+            type: string
+        - name: markettrackingid
+          in: path
+          description: markettrackingid parameter
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ExecuteMarketTrackingResponse
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  MarketTracking:
+                    type: object
+                    properties:
+                      MarketTrackingWorkTaskType:
+                        type: string
+                        description: "\r\n"
+                        format: string
+                      GeneralMarketResearchDirectoryEntryInstanceReference:
+                        type: string
+                        description: "\r\n"
+                        format: object
+                      MarketTrackingWorkTaskWorkProducts:
+                        type: string
+                        description: "\r\n"
+                        format: string
+                      MarketTrackingWorkTaskResult:
+                        type: string
+                        description: "\r\n"
+                        format: string
+                      MarketTrackingWorkTaskDate-Time:
+                        type: object
+                        properties:
+                          DateContent:
+                            type: string
+                            description: ''
+                            format: string
+                        description: The date-time the market tracking task is performed
+                description: >-
+                  Output: ExBQ Execute an automated task for the tracking
+                  activity (e.g. upload new data)
+        '400':
+          description: BadRequest
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status_code:
+                    type: string
+                    format: string
+                  status:
+                    type: string
+                    format: string
+                  message:
+                    type: string
+                    format: string
+                description: Status Attributes
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status_code:
+                    type: string
+                    format: string
+                  status:
+                    type: string
+                    format: string
+                  message:
+                    type: string
+                    format: string
+                description: Status Attributes
+        '403':
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status_code:
+                    type: string
+                    format: string
+                  status:
+                    type: string
+                    format: string
+                  message:
+                    type: string
+                    format: string
+                description: Status Attributes
+        '404':
+          description: NotFound
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status_code:
+                    type: string
+                    format: string
+                  status:
+                    type: string
+                    format: string
+                  message:
+                    type: string
+                    format: string
+                description: Status Attributes
+        '429':
+          description: TooManyRequests
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status_code:
+                    type: string
+                    format: string
+                  status:
+                    type: string
+                    format: string
+                  message:
+                    type: string
+                    format: string
+                description: Status Attributes
+        '500':
+          description: InternalServerError
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status_code:
+                    type: string
+                    format: string
+                  status:
+                    type: string
+                    format: string
+                  message:
+                    type: string
+                    format: string
+                description: Status Attributes
+      requestBody:
+        description: Request body
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                MarketTracking:
+                  type: object
+                  properties:
+                    MarketTrackingWorkTaskType:
+                      type: string
+                      description: "\r\n"
+                      format: string
+                    GeneralMarketResearchDirectoryEntryInstanceReference:
+                      type: string
+                      description: "\r\n"
+                      format: object
+                    MarketTrackingWorkTaskWorkProducts:
+                      type: string
+                      description: "\r\n"
+                      format: string
+                    MarketTrackingWorkTaskDate-Time:
+                      type: object
+                      properties:
+                        DateContent:
+                          type: string
+                          description: ''
+                          format: string
+                      description: The date-time the market tracking task is performed
+              description: >-
+                Input: ExBQ Execute an automated task for the tracking activity
+                (e.g. upload new data)
+  /Advertising/{advertisingid}/MarketTracking/{markettrackingid}/Request:
+    put:
+      tags:
+        - BQ - MarketTracking
+      summary: >-
+        RqBQ Request manual intervention in the market tracking (e.g. request
+        reworking of the analysis)
+      description: >-
+        RqBQ Request manual intervention in the market tracking (e.g. request
+        reworking of the analysis)
+      operationId: RequestMarketTracking
+      parameters:
+        - name: advertisingid
+          in: path
+          description: advertisingid parameter
+          required: true
+          schema:
+            type: string
+        - name: markettrackingid
+          in: path
+          description: markettrackingid parameter
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: RequestMarketTrackingResponse
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  MarketTracking:
+                    type: object
+                    properties:
+                      MarketTrackingWorkTaskType:
+                        type: string
+                        description: "\r\n"
+                        format: string
+                      GeneralMarketResearchDirectoryEntryInstanceReference:
+                        type: string
+                        description: "\r\n"
+                        format: object
+                      MarketTrackingWorkTaskWorkProducts:
+                        type: string
+                        description: "\r\n"
+                        format: string
+                      MarketTrackingWorkTaskResult:
+                        type: string
+                        description: "\r\n"
+                        format: string
+                      MarketTrackingWorkTaskDate-Time:
+                        type: object
+                        properties:
+                          DateContent:
+                            type: string
+                            description: ''
+                            format: string
+                        description: The date-time the market tracking task is performed
+                description: >-
+                  Output: RqBQ Request manual intervention in the market
+                  tracking (e.g. request reworking of the analysis)
+        '400':
+          description: BadRequest
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status_code:
+                    type: string
+                    format: string
+                  status:
+                    type: string
+                    format: string
+                  message:
+                    type: string
+                    format: string
+                description: Status Attributes
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status_code:
+                    type: string
+                    format: string
+                  status:
+                    type: string
+                    format: string
+                  message:
+                    type: string
+                    format: string
+                description: Status Attributes
+        '403':
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status_code:
+                    type: string
+                    format: string
+                  status:
+                    type: string
+                    format: string
+                  message:
+                    type: string
+                    format: string
+                description: Status Attributes
+        '404':
+          description: NotFound
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status_code:
+                    type: string
+                    format: string
+                  status:
+                    type: string
+                    format: string
+                  message:
+                    type: string
+                    format: string
+                description: Status Attributes
+        '429':
+          description: TooManyRequests
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status_code:
+                    type: string
+                    format: string
+                  status:
+                    type: string
+                    format: string
+                  message:
+                    type: string
+                    format: string
+                description: Status Attributes
+        '500':
+          description: InternalServerError
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status_code:
+                    type: string
+                    format: string
+                  status:
+                    type: string
+                    format: string
+                  message:
+                    type: string
+                    format: string
+                description: Status Attributes
+      requestBody:
+        description: Request body
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                MarketTracking:
+                  type: object
+                  properties:
+                    MarketTrackingWorkTaskType:
+                      type: string
+                      description: "\r\n"
+                      format: string
+                    GeneralMarketResearchDirectoryEntryInstanceReference:
+                      type: string
+                      description: "\r\n"
+                      format: object
+                    MarketTrackingWorkTaskWorkProducts:
+                      type: string
+                      description: "\r\n"
+                      format: string
+                    MarketTrackingWorkTaskDate-Time:
+                      type: object
+                      properties:
+                        DateContent:
+                          type: string
+                          description: ''
+                          format: string
+                      description: The date-time the market tracking task is performed
+              description: >-
+                Input: RqBQ Request manual intervention in the market tracking
+                (e.g. request reworking of the analysis)
+  /Advertising/{advertisingid}/MarketTracking/{markettrackingid}/Retrieve:
+    get:
+      tags:
+        - BQ - MarketTracking
+      summary: ReBQ Retrieve details about the market tracking activity
+      description: ReBQ Retrieve details about the market tracking activity
+      operationId: RetrieveMarketTracking
+      parameters:
+        - name: advertisingid
+          in: path
+          description: advertisingid parameter
+          required: true
+          schema:
+            type: string
+        - name: markettrackingid
+          in: path
+          description: markettrackingid parameter
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: RetrieveMarketTrackingResponse
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  MarketTracking:
+                    type: object
+                    properties:
+                      MarketTrackingWorkTaskType:
+                        type: string
+                        description: "\r\n"
+                        format: string
+                      GeneralMarketResearchDirectoryEntryInstanceReference:
+                        type: string
+                        description: "\r\n"
+                        format: object
+                      MarketTrackingWorkTaskWorkProducts:
+                        type: string
+                        description: "\r\n"
+                        format: string
+                      MarketTrackingWorkTaskResult:
+                        type: string
+                        description: "\r\n"
+                        format: string
+                      MarketTrackingWorkTaskDate-Time:
+                        type: object
+                        properties:
+                          DateContent:
+                            type: string
+                            description: ''
+                            format: string
+                        description: The date-time the market tracking task is performed
+                description: >-
+                  Output: ReBQ Retrieve details about the market tracking
+                  activity
+        '400':
+          description: BadRequest
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status_code:
+                    type: string
+                    format: string
+                  status:
+                    type: string
+                    format: string
+                  message:
+                    type: string
+                    format: string
+                description: Status Attributes
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status_code:
+                    type: string
+                    format: string
+                  status:
+                    type: string
+                    format: string
+                  message:
+                    type: string
+                    format: string
+                description: Status Attributes
+        '403':
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status_code:
+                    type: string
+                    format: string
+                  status:
+                    type: string
+                    format: string
+                  message:
+                    type: string
+                    format: string
+                description: Status Attributes
+        '404':
+          description: NotFound
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status_code:
+                    type: string
+                    format: string
+                  status:
+                    type: string
+                    format: string
+                  message:
+                    type: string
+                    format: string
+                description: Status Attributes
+        '429':
+          description: TooManyRequests
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status_code:
+                    type: string
+                    format: string
+                  status:
+                    type: string
+                    format: string
+                  message:
+                    type: string
+                    format: string
+                description: Status Attributes
+        '500':
+          description: InternalServerError
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status_code:
+                    type: string
+                    format: string
+                  status:
+                    type: string
+                    format: string
+                  message:
+                    type: string
+                    format: string
+                description: Status Attributes
+  /Advertising/{advertisingid}/PerformanceAssessment/Create:
+    post:
+      tags:
+        - BQ - PerformanceAssessment
+      summary: >-
+        CrBQ Create a performance assessment of the advertising campaign
+        portfolio
+      description: >-
+        CrBQ Create a performance assessment of the advertising campaign
+        portfolio
+      operationId: CreatePerformanceAssessment
+      parameters:
+        - name: advertisingid
+          in: path
+          description: advertisingid parameter
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: CreatePerformanceAssessmentResponse
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  PerformanceAssessment:
+                    type: object
+                    properties:
+                      PerformanceAssessmentWorkTaskType:
+                        type: string
+                        description: "\r\n"
+                        format: string
+                      PerformanceAssessmentWorkTaskWorkProducts:
+                        type: string
+                        description: "\r\n"
+                        format: string
+                      PerformanceAssessmentWorkTaskResult:
+                        type: string
+                        description: "\r\n"
+                        format: string
+                      PerformanceAssessmentWorkTaskDate-Time:
+                        type: object
+                        properties:
+                          DateContent:
+                            type: string
+                            description: ''
+                            format: string
+                        description: The date-time the market tracking task is performed
+                description: >-
+                  Output: CrBQ Create a performance assessment of the
+                  advertising campaign portfolio
+        '400':
+          description: BadRequest
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status_code:
+                    type: string
+                    format: string
+                  status:
+                    type: string
+                    format: string
+                  message:
+                    type: string
+                    format: string
+                description: Status Attributes
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status_code:
+                    type: string
+                    format: string
+                  status:
+                    type: string
+                    format: string
+                  message:
+                    type: string
+                    format: string
+                description: Status Attributes
+        '403':
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status_code:
+                    type: string
+                    format: string
+                  status:
+                    type: string
+                    format: string
+                  message:
+                    type: string
+                    format: string
+                description: Status Attributes
+        '404':
+          description: NotFound
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status_code:
+                    type: string
+                    format: string
+                  status:
+                    type: string
+                    format: string
+                  message:
+                    type: string
+                    format: string
+                description: Status Attributes
+        '429':
+          description: TooManyRequests
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status_code:
+                    type: string
+                    format: string
+                  status:
+                    type: string
+                    format: string
+                  message:
+                    type: string
+                    format: string
+                description: Status Attributes
+        '500':
+          description: InternalServerError
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status_code:
+                    type: string
+                    format: string
+                  status:
+                    type: string
+                    format: string
+                  message:
+                    type: string
+                    format: string
+                description: Status Attributes
+      requestBody:
+        description: Request body
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                PerformanceAssessment:
+                  type: object
+                  properties:
+                    PerformanceAssessmentWorkTaskType:
+                      type: string
+                      description: "\r\n"
+                      format: string
+                    PerformanceAssessmentWorkTaskWorkProducts:
+                      type: string
+                      description: "\r\n"
+                      format: string
+                    PerformanceAssessmentWorkTaskDate-Time:
+                      type: object
+                      properties:
+                        DateContent:
+                          type: string
+                          description: ''
+                          format: string
+                      description: The date-time the market tracking task is performed
+              description: >-
+                Input: CrBQ Create a performance assessment of the advertising
+                campaign portfolio
+  /Advertising/{advertisingid}/PerformanceAssessment/{performanceassessmentid}/Update:
+    put:
+      tags:
+        - BQ - PerformanceAssessment
+      summary: UpBQ Update details of a advertising campaign portfolio assessment
+      description: UpBQ Update details of a advertising campaign portfolio assessment
+      operationId: UpdatePerformanceAssessment
+      parameters:
+        - name: advertisingid
+          in: path
+          description: advertisingid parameter
+          required: true
+          schema:
+            type: string
+        - name: performanceassessmentid
+          in: path
+          description: performanceassessmentid parameter
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: UpdatePerformanceAssessmentResponse
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  PerformanceAssessment:
+                    type: object
+                    properties:
+                      PerformanceAssessmentWorkTaskType:
+                        type: string
+                        description: "\r\n"
+                        format: string
+                      PerformanceAssessmentWorkTaskWorkProducts:
+                        type: string
+                        description: "\r\n"
+                        format: string
+                      PerformanceAssessmentWorkTaskResult:
+                        type: string
+                        description: "\r\n"
+                        format: string
+                      PerformanceAssessmentWorkTaskDate-Time:
+                        type: object
+                        properties:
+                          DateContent:
+                            type: string
+                            description: ''
+                            format: string
+                        description: The date-time the market tracking task is performed
+                description: >-
+                  Output: UpBQ Update details of a advertising campaign
+                  portfolio assessment
+        '400':
+          description: BadRequest
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status_code:
+                    type: string
+                    format: string
+                  status:
+                    type: string
+                    format: string
+                  message:
+                    type: string
+                    format: string
+                description: Status Attributes
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status_code:
+                    type: string
+                    format: string
+                  status:
+                    type: string
+                    format: string
+                  message:
+                    type: string
+                    format: string
+                description: Status Attributes
+        '403':
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status_code:
+                    type: string
+                    format: string
+                  status:
+                    type: string
+                    format: string
+                  message:
+                    type: string
+                    format: string
+                description: Status Attributes
+        '404':
+          description: NotFound
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status_code:
+                    type: string
+                    format: string
+                  status:
+                    type: string
+                    format: string
+                  message:
+                    type: string
+                    format: string
+                description: Status Attributes
+        '429':
+          description: TooManyRequests
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status_code:
+                    type: string
+                    format: string
+                  status:
+                    type: string
+                    format: string
+                  message:
+                    type: string
+                    format: string
+                description: Status Attributes
+        '500':
+          description: InternalServerError
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status_code:
+                    type: string
+                    format: string
+                  status:
+                    type: string
+                    format: string
+                  message:
+                    type: string
+                    format: string
+                description: Status Attributes
+      requestBody:
+        description: Request body
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                PerformanceAssessment:
+                  type: object
+                  properties:
+                    PerformanceAssessmentWorkTaskType:
+                      type: string
+                      description: "\r\n"
+                      format: string
+                    PerformanceAssessmentWorkTaskWorkProducts:
+                      type: string
+                      description: "\r\n"
+                      format: string
+                    PerformanceAssessmentWorkTaskResult:
+                      type: string
+                      description: "\r\n"
+                      format: string
+                    PerformanceAssessmentWorkTaskDate-Time:
+                      type: object
+                      properties:
+                        DateContent:
+                          type: string
+                          description: ''
+                          format: string
+                      description: The date-time the market tracking task is performed
+              description: >-
+                Input: UpBQ Update details of a advertising campaign portfolio
+                assessment
+  /Advertising/{advertisingid}/PerformanceAssessment/{performanceassessmentid}/Execute:
+    put:
+      tags:
+        - BQ - PerformanceAssessment
+      summary: >-
+        ExBQ Execute an automated action for a performance assessment (e.g.
+        trigger assessment report)
+      description: >-
+        ExBQ Execute an automated action for a performance assessment (e.g.
+        trigger assessment report)
+      operationId: ExecutePerformanceAssessment
+      parameters:
+        - name: advertisingid
+          in: path
+          description: advertisingid parameter
+          required: true
+          schema:
+            type: string
+        - name: performanceassessmentid
+          in: path
+          description: performanceassessmentid parameter
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ExecutePerformanceAssessmentResponse
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  PerformanceAssessment:
+                    type: object
+                    properties:
+                      PerformanceAssessmentWorkTaskType:
+                        type: string
+                        description: "\r\n"
+                        format: string
+                      PerformanceAssessmentWorkTaskWorkProducts:
+                        type: string
+                        description: "\r\n"
+                        format: string
+                      PerformanceAssessmentWorkTaskResult:
+                        type: string
+                        description: "\r\n"
+                        format: string
+                      PerformanceAssessmentWorkTaskDate-Time:
+                        type: object
+                        properties:
+                          DateContent:
+                            type: string
+                            description: ''
+                            format: string
+                        description: The date-time the market tracking task is performed
+                description: >-
+                  Output: ExBQ Execute an automated action for a performance
+                  assessment (e.g. trigger assessment report)
+        '400':
+          description: BadRequest
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status_code:
+                    type: string
+                    format: string
+                  status:
+                    type: string
+                    format: string
+                  message:
+                    type: string
+                    format: string
+                description: Status Attributes
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status_code:
+                    type: string
+                    format: string
+                  status:
+                    type: string
+                    format: string
+                  message:
+                    type: string
+                    format: string
+                description: Status Attributes
+        '403':
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status_code:
+                    type: string
+                    format: string
+                  status:
+                    type: string
+                    format: string
+                  message:
+                    type: string
+                    format: string
+                description: Status Attributes
+        '404':
+          description: NotFound
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status_code:
+                    type: string
+                    format: string
+                  status:
+                    type: string
+                    format: string
+                  message:
+                    type: string
+                    format: string
+                description: Status Attributes
+        '429':
+          description: TooManyRequests
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status_code:
+                    type: string
+                    format: string
+                  status:
+                    type: string
+                    format: string
+                  message:
+                    type: string
+                    format: string
+                description: Status Attributes
+        '500':
+          description: InternalServerError
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status_code:
+                    type: string
+                    format: string
+                  status:
+                    type: string
+                    format: string
+                  message:
+                    type: string
+                    format: string
+                description: Status Attributes
+      requestBody:
+        description: Request body
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                PerformanceAssessment:
+                  type: object
+                  properties:
+                    PerformanceAssessmentWorkTaskType:
+                      type: string
+                      description: "\r\n"
+                      format: string
+                    PerformanceAssessmentWorkTaskWorkProducts:
+                      type: string
+                      description: "\r\n"
+                      format: string
+                    PerformanceAssessmentWorkTaskDate-Time:
+                      type: object
+                      properties:
+                        DateContent:
+                          type: string
+                          description: ''
+                          format: string
+                      description: The date-time the market tracking task is performed
+              description: >-
+                Input: ExBQ Execute an automated action for a performance
+                assessment (e.g. trigger assessment report)
+  /Advertising/{advertisingid}/PerformanceAssessment/{performanceassessmentid}/Request:
+    put:
+      tags:
+        - BQ - PerformanceAssessment
+      summary: >-
+        RqBQ Request manual intervention to a performance assessment (e.g.
+        request specific analysis)
+      description: >-
+        RqBQ Request manual intervention to a performance assessment (e.g.
+        request specific analysis)
+      operationId: RequestPerformanceAssessment
+      parameters:
+        - name: advertisingid
+          in: path
+          description: advertisingid parameter
+          required: true
+          schema:
+            type: string
+        - name: performanceassessmentid
+          in: path
+          description: performanceassessmentid parameter
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: RequestPerformanceAssessmentResponse
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  PerformanceAssessment:
+                    type: object
+                    properties:
+                      PerformanceAssessmentWorkTaskType:
+                        type: string
+                        description: "\r\n"
+                        format: string
+                      PerformanceAssessmentWorkTaskWorkProducts:
+                        type: string
+                        description: "\r\n"
+                        format: string
+                      PerformanceAssessmentWorkTaskResult:
+                        type: string
+                        description: "\r\n"
+                        format: string
+                      PerformanceAssessmentWorkTaskDate-Time:
+                        type: object
+                        properties:
+                          DateContent:
+                            type: string
+                            description: ''
+                            format: string
+                        description: The date-time the market tracking task is performed
+                description: >-
+                  Output: RqBQ Request manual intervention to a performance
+                  assessment (e.g. request specific analysis)
+        '400':
+          description: BadRequest
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status_code:
+                    type: string
+                    format: string
+                  status:
+                    type: string
+                    format: string
+                  message:
+                    type: string
+                    format: string
+                description: Status Attributes
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status_code:
+                    type: string
+                    format: string
+                  status:
+                    type: string
+                    format: string
+                  message:
+                    type: string
+                    format: string
+                description: Status Attributes
+        '403':
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status_code:
+                    type: string
+                    format: string
+                  status:
+                    type: string
+                    format: string
+                  message:
+                    type: string
+                    format: string
+                description: Status Attributes
+        '404':
+          description: NotFound
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status_code:
+                    type: string
+                    format: string
+                  status:
+                    type: string
+                    format: string
+                  message:
+                    type: string
+                    format: string
+                description: Status Attributes
+        '429':
+          description: TooManyRequests
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status_code:
+                    type: string
+                    format: string
+                  status:
+                    type: string
+                    format: string
+                  message:
+                    type: string
+                    format: string
+                description: Status Attributes
+        '500':
+          description: InternalServerError
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status_code:
+                    type: string
+                    format: string
+                  status:
+                    type: string
+                    format: string
+                  message:
+                    type: string
+                    format: string
+                description: Status Attributes
+      requestBody:
+        description: Request body
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                PerformanceAssessment:
+                  type: object
+                  properties:
+                    PerformanceAssessmentWorkTaskType:
+                      type: string
+                      description: "\r\n"
+                      format: string
+                    PerformanceAssessmentWorkTaskWorkProducts:
+                      type: string
+                      description: "\r\n"
+                      format: string
+                    PerformanceAssessmentWorkTaskDate-Time:
+                      type: object
+                      properties:
+                        DateContent:
+                          type: string
+                          description: ''
+                          format: string
+                      description: The date-time the market tracking task is performed
+              description: >-
+                Input: RqBQ Request manual intervention to a performance
+                assessment (e.g. request specific analysis)
+  /Advertising/{advertisingid}/PerformanceAssessment/{performanceassessmentid}/Retrieve:
+    get:
+      tags:
+        - BQ - PerformanceAssessment
+      summary: >-
+        ReBQ Retrieve details about advertising campaign performance assessment
+        activity
+      description: >-
+        ReBQ Retrieve details about advertising campaign performance assessment
+        activity
+      operationId: RetrievePerformanceAssessment
+      parameters:
+        - name: advertisingid
+          in: path
+          description: advertisingid parameter
+          required: true
+          schema:
+            type: string
+        - name: performanceassessmentid
+          in: path
+          description: performanceassessmentid parameter
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: RetrievePerformanceAssessmentResponse
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  PerformanceAssessment:
+                    type: object
+                    properties:
+                      PerformanceAssessmentWorkTaskType:
+                        type: string
+                        description: "\r\n"
+                        format: string
+                      PerformanceAssessmentWorkTaskWorkProducts:
+                        type: string
+                        description: "\r\n"
+                        format: string
+                      PerformanceAssessmentWorkTaskResult:
+                        type: string
+                        description: "\r\n"
+                        format: string
+                      PerformanceAssessmentWorkTaskDate-Time:
+                        type: object
+                        properties:
+                          DateContent:
+                            type: string
+                            description: ''
+                            format: string
+                        description: The date-time the market tracking task is performed
+                description: >-
+                  Output: ReBQ Retrieve details about advertising campaign
+                  performance assessment activity
+        '400':
+          description: BadRequest
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status_code:
+                    type: string
+                    format: string
+                  status:
+                    type: string
+                    format: string
+                  message:
+                    type: string
+                    format: string
+                description: Status Attributes
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status_code:
+                    type: string
+                    format: string
+                  status:
+                    type: string
+                    format: string
+                  message:
+                    type: string
+                    format: string
+                description: Status Attributes
+        '403':
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status_code:
+                    type: string
+                    format: string
+                  status:
+                    type: string
+                    format: string
+                  message:
+                    type: string
+                    format: string
+                description: Status Attributes
+        '404':
+          description: NotFound
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status_code:
+                    type: string
+                    format: string
+                  status:
+                    type: string
+                    format: string
+                  message:
+                    type: string
+                    format: string
+                description: Status Attributes
+        '429':
+          description: TooManyRequests
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status_code:
+                    type: string
+                    format: string
+                  status:
+                    type: string
+                    format: string
+                  message:
+                    type: string
+                    format: string
+                description: Status Attributes
+        '500':
+          description: InternalServerError
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status_code:
+                    type: string
+                    format: string
+                  status:
+                    type: string
+                    format: string
+                  message:
+                    type: string
+                    format: string
+                description: Status Attributes
+  /Advertising/{advertisingid}/CampaignDirection/Create:
+    post:
+      tags:
+        - BQ - CampaignDirection
+      summary: >-
+        CrBQ Create advertising campaign direction schedules (e.g. create the
+        schedules for design or execution activity)
+      description: >-
+        CrBQ Create advertising campaign direction schedules (e.g. create the
+        schedules for design or execution activity)
+      operationId: CreateCampaignDirection
+      parameters:
+        - name: advertisingid
+          in: path
+          description: advertisingid parameter
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: CampaignDirection
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  AdvertisingCampaignDevelopmentSchedule:
+                    type: string
+                    description: >-
+                      Schedule of planned and actual advertising campaign design
+                      development and refinement activity
+                    format: string
+                  AdvertisingCampaignExecutionSchedule:
+                    type: string
+                    description: >-
+                      Schedule of planned and actual customer campaign execution
+                      activities
+                    format: string
+                description: >-
+                  A collection of one or more responsibilities or tasks under
+                  management
+
+
+                  Examples: Relationship development, Troubleshooting
+        '400':
+          description: BadRequest
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status_code:
+                    type: string
+                    format: string
+                  status:
+                    type: string
+                    format: string
+                  message:
+                    type: string
+                    format: string
+                description: Status Attributes
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status_code:
+                    type: string
+                    format: string
+                  status:
+                    type: string
+                    format: string
+                  message:
+                    type: string
+                    format: string
+                description: Status Attributes
+        '403':
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status_code:
+                    type: string
+                    format: string
+                  status:
+                    type: string
+                    format: string
+                  message:
+                    type: string
+                    format: string
+                description: Status Attributes
+        '404':
+          description: NotFound
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status_code:
+                    type: string
+                    format: string
+                  status:
+                    type: string
+                    format: string
+                  message:
+                    type: string
+                    format: string
+                description: Status Attributes
+        '429':
+          description: TooManyRequests
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status_code:
+                    type: string
+                    format: string
+                  status:
+                    type: string
+                    format: string
+                  message:
+                    type: string
+                    format: string
+                description: Status Attributes
+        '500':
+          description: InternalServerError
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status_code:
+                    type: string
+                    format: string
+                  status:
+                    type: string
+                    format: string
+                  message:
+                    type: string
+                    format: string
+                description: Status Attributes
+      requestBody:
+        description: Request body
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                AdvertisingCampaignDevelopmentSchedule:
+                  type: string
+                  description: >-
+                    Schedule of planned and actual advertising campaign design
+                    development and refinement activity
+                  format: string
+                AdvertisingCampaignExecutionSchedule:
+                  type: string
+                  description: >-
+                    Schedule of planned and actual customer campaign execution
+                    activities
+                  format: string
+              description: >-
+                A collection of one or more responsibilities or tasks under
+                management
+
+
+                Examples: Relationship development, Troubleshooting
+  /Advertising/{advertisingid}/CampaignDirection/{campaigndirectionid}/Update:
+    put:
+      tags:
+        - BQ - CampaignDirection
+      summary: UpBQ Update the advertising campaign design and execution schedules
+      description: UpBQ Update the advertising campaign design and execution schedules
+      operationId: UpdateCampaignDirection
+      parameters:
+        - name: advertisingid
+          in: path
+          description: advertisingid parameter
+          required: true
+          schema:
+            type: string
+        - name: campaigndirectionid
+          in: path
+          description: campaigndirectionid parameter
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: CampaignDirection
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  AdvertisingCampaignDevelopmentSchedule:
+                    type: string
+                    description: >-
+                      Schedule of planned and actual advertising campaign design
+                      development and refinement activity
+                    format: string
+                  AdvertisingCampaignExecutionSchedule:
+                    type: string
+                    description: >-
+                      Schedule of planned and actual customer campaign execution
+                      activities
+                    format: string
+                description: >-
+                  A collection of one or more responsibilities or tasks under
+                  management
+
+
+                  Examples: Relationship development, Troubleshooting
+        '400':
+          description: BadRequest
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status_code:
+                    type: string
+                    format: string
+                  status:
+                    type: string
+                    format: string
+                  message:
+                    type: string
+                    format: string
+                description: Status Attributes
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status_code:
+                    type: string
+                    format: string
+                  status:
+                    type: string
+                    format: string
+                  message:
+                    type: string
+                    format: string
+                description: Status Attributes
+        '403':
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status_code:
+                    type: string
+                    format: string
+                  status:
+                    type: string
+                    format: string
+                  message:
+                    type: string
+                    format: string
+                description: Status Attributes
+        '404':
+          description: NotFound
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status_code:
+                    type: string
+                    format: string
+                  status:
+                    type: string
+                    format: string
+                  message:
+                    type: string
+                    format: string
+                description: Status Attributes
+        '429':
+          description: TooManyRequests
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status_code:
+                    type: string
+                    format: string
+                  status:
+                    type: string
+                    format: string
+                  message:
+                    type: string
+                    format: string
+                description: Status Attributes
+        '500':
+          description: InternalServerError
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status_code:
+                    type: string
+                    format: string
+                  status:
+                    type: string
+                    format: string
+                  message:
+                    type: string
+                    format: string
+                description: Status Attributes
+      requestBody:
+        description: Request body
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                AdvertisingCampaignDevelopmentSchedule:
+                  type: string
+                  description: >-
+                    Schedule of planned and actual advertising campaign design
+                    development and refinement activity
+                  format: string
+                AdvertisingCampaignExecutionSchedule:
+                  type: string
+                  description: >-
+                    Schedule of planned and actual customer campaign execution
+                    activities
+                  format: string
+              description: >-
+                A collection of one or more responsibilities or tasks under
+                management
+
+
+                Examples: Relationship development, Troubleshooting
+  /Advertising/{advertisingid}/CampaignDirection/{campaigndirectionid}/Request:
+    put:
+      tags:
+        - BQ - CampaignDirection
+      summary: >-
+        RqBQ Request manual intervention to the schedules (e.g. rework
+        priorities)
+      description: >-
+        RqBQ Request manual intervention to the schedules (e.g. rework
+        priorities)
+      operationId: RequestCampaignDirection
+      parameters:
+        - name: advertisingid
+          in: path
+          description: advertisingid parameter
+          required: true
+          schema:
+            type: string
+        - name: campaigndirectionid
+          in: path
+          description: campaigndirectionid parameter
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: CampaignDirection
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  AdvertisingCampaignDevelopmentSchedule:
+                    type: string
+                    description: >-
+                      Schedule of planned and actual advertising campaign design
+                      development and refinement activity
+                    format: string
+                  AdvertisingCampaignExecutionSchedule:
+                    type: string
+                    description: >-
+                      Schedule of planned and actual customer campaign execution
+                      activities
+                    format: string
+                description: >-
+                  A collection of one or more responsibilities or tasks under
+                  management
+
+
+                  Examples: Relationship development, Troubleshooting
+        '400':
+          description: BadRequest
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status_code:
+                    type: string
+                    format: string
+                  status:
+                    type: string
+                    format: string
+                  message:
+                    type: string
+                    format: string
+                description: Status Attributes
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status_code:
+                    type: string
+                    format: string
+                  status:
+                    type: string
+                    format: string
+                  message:
+                    type: string
+                    format: string
+                description: Status Attributes
+        '403':
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status_code:
+                    type: string
+                    format: string
+                  status:
+                    type: string
+                    format: string
+                  message:
+                    type: string
+                    format: string
+                description: Status Attributes
+        '404':
+          description: NotFound
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status_code:
+                    type: string
+                    format: string
+                  status:
+                    type: string
+                    format: string
+                  message:
+                    type: string
+                    format: string
+                description: Status Attributes
+        '429':
+          description: TooManyRequests
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status_code:
+                    type: string
+                    format: string
+                  status:
+                    type: string
+                    format: string
+                  message:
+                    type: string
+                    format: string
+                description: Status Attributes
+        '500':
+          description: InternalServerError
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status_code:
+                    type: string
+                    format: string
+                  status:
+                    type: string
+                    format: string
+                  message:
+                    type: string
+                    format: string
+                description: Status Attributes
+      requestBody:
+        description: Request body
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                AdvertisingCampaignDevelopmentSchedule:
+                  type: string
+                  description: >-
+                    Schedule of planned and actual advertising campaign design
+                    development and refinement activity
+                  format: string
+                AdvertisingCampaignExecutionSchedule:
+                  type: string
+                  description: >-
+                    Schedule of planned and actual customer campaign execution
+                    activities
+                  format: string
+              description: >-
+                A collection of one or more responsibilities or tasks under
+                management
+
+
+                Examples: Relationship development, Troubleshooting
+  /Advertising/{advertisingid}/CampaignDirection/{campaigndirectionid}/Retrieve:
+    get:
+      tags:
+        - BQ - CampaignDirection
+      summary: >-
+        ReBQ Retrieve details about advertising campaign design and execution
+        direction and scheduling activities
+      description: >-
+        ReBQ Retrieve details about advertising campaign design and execution
+        direction and scheduling activities
+      operationId: RetrieveCampaignDirection
+      parameters:
+        - name: advertisingid
+          in: path
+          description: advertisingid parameter
+          required: true
+          schema:
+            type: string
+        - name: campaigndirectionid
+          in: path
+          description: campaigndirectionid parameter
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: RetrieveCampaignDirectionResponse
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  CampaignDirection:
+                    type: object
+                    properties:
+                      AdvertisingCampaignDevelopmentSchedule:
+                        type: string
+                        description: "\r\n"
+                        format: string
+                      AdvertisingCampaignExecutionSchedule:
+                        type: string
+                        description: "\r\n"
+                        format: string
+                description: >-
+                  Output: ReBQ Retrieve details about advertising campaign
+                  design and execution direction and scheduling activities
+        '400':
+          description: BadRequest
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status_code:
+                    type: string
+                    format: string
+                  status:
+                    type: string
+                    format: string
+                  message:
+                    type: string
+                    format: string
+                description: Status Attributes
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status_code:
+                    type: string
+                    format: string
+                  status:
+                    type: string
+                    format: string
+                  message:
+                    type: string
+                    format: string
+                description: Status Attributes
+        '403':
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status_code:
+                    type: string
+                    format: string
+                  status:
+                    type: string
+                    format: string
+                  message:
+                    type: string
+                    format: string
+                description: Status Attributes
+        '404':
+          description: NotFound
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status_code:
+                    type: string
+                    format: string
+                  status:
+                    type: string
+                    format: string
+                  message:
+                    type: string
+                    format: string
+                description: Status Attributes
+        '429':
+          description: TooManyRequests
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status_code:
+                    type: string
+                    format: string
+                  status:
+                    type: string
+                    format: string
+                  message:
+                    type: string
+                    format: string
+                description: Status Attributes
+        '500':
+          description: InternalServerError
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status_code:
+                    type: string
+                    format: string
+                  status:
+                    type: string
+                    format: string
+                  message:
+                    type: string
+                    format: string
+                description: Status Attributes
+components:
+  schemas:
+    HTTPError:
+      type: object
+      properties:
+        status_code:
+          type: string
+          format: string
+        status:
+          type: string
+          format: string
+        message:
+          type: string
+          format: string
+      description: Status Attributes
+    CampaignDirection:
+      type: object
+      properties:
+        AdvertisingCampaignDevelopmentSchedule:
+          type: string
+          description: >-
+            Schedule of planned and actual advertising campaign design
+            development and refinement activity
+          format: string
+        AdvertisingCampaignExecutionSchedule:
+          type: string
+          description: >-
+            Schedule of planned and actual customer campaign execution
+            activities
+          format: string
+      description: |-
+        A collection of one or more responsibilities or tasks under management
+
+        Examples: Relationship development, Troubleshooting
+    date:
+      type: object
+      properties:
+        DateContent:
+          type: string
+          description: ''
+          format: string
+      description: The date-time the market tracking task is performed
+    MarketTracking:
+      type: object
+      properties:
+        MarketTrackingWorkTaskType:
+          type: string
+          description: >-
+            The type of work task (e.g. track advertising activity, assess
+            advertising impact)
+          format: string
+        MarketTrackingWorkTask:
+          type: string
+          description: >-
+            The make-up of the market tracking task performed, includes
+            consolidation and analysis of market research to assess competitor
+            advertising activity and impact of advertising campaigns
+          format: string
+        GeneralMarketResearchDirectoryEntryInstanceReference:
+          type: string
+          description: Reference to an internally maintained market research viewpoint
+          format: object
+        MarketTrackingWorkTaskWorkProducts:
+          type: string
+          description: >-
+            File of consolidated notes, evaluations and findings for the market
+            tracking work task
+          format: string
+        MarketTrackingWorkTaskResult:
+          type: string
+          description: >-
+            Details of the outcome or result of the work task - typically points
+            of view drawn from the market research
+          format: string
+        MarketTrackingWorkTaskDate-Time:
+          type: object
+          properties:
+            DateContent:
+              type: string
+              description: ''
+              format: string
+          description: The date-time the market tracking task is performed
+      description: |-
+        A collection of one or more responsibilities or tasks under management
+
+        Examples: Relationship development, Troubleshooting
+    PerformanceAssessment:
+      type: object
+      properties:
+        PerformanceAssessmentWorkTaskType:
+          type: string
+          description: >-
+            The type of work task (e.g. track customer and prospect response to
+            advertising)
+          format: string
+        PerformanceAssessmentWorkTask:
+          type: string
+          description: >-
+            The make-up of the market tracking task performed, includes
+            consolidation and analysis of market research
+          format: string
+        PerformanceAssessmentWorkTaskWorkProducts:
+          type: string
+          description: >-
+            File of consolidated notes, evaluations and findings for the work
+            task
+          format: string
+        PerformanceAssessmentWorkTaskResult:
+          type: string
+          description: >-
+            Details of the outcome or result of the work task - indication of
+            the need to amend, redirect and/or expand advertising campaign
+            activity
+          format: string
+        PerformanceAssessmentWorkTaskDate-Time:
+          type: object
+          properties:
+            DateContent:
+              type: string
+              description: ''
+              format: string
+          description: The date-time the market tracking task is performed
+      description: |-
+        A collection of one or more responsibilities or tasks under management
+
+        Examples: Relationship development, Troubleshooting
+    AdvertisingCampaignManagementPlan:
+      type: object
+      properties:
+        AdvertisingCampaignPortfolio:
+          type: string
+          description: >-
+            The collection of advertising campaigns that is used to assess
+            performance and coverage and direct development and execution
+            activity
+          format: string
+        AdvertisingCampaignType:
+          type: string
+          description: The type of advertising campaign (e.g. media, mailshot, web-based)
+          format: string
+        AdvertisingCampaignDescription:
+          type: string
+          description: >-
+            A description of the campaign that clarifies the content and media
+            to be used in the advertising campaign and outlines the target
+            audience
+          format: string
+        AdvertisingCampaignMetrics:
+          type: string
+          description: >-
+            Metrics that are defined to assess the target and actual impact of
+            the campaign
+          format: string
+        AdvertisingCampaignMetricDefinition:
+          type: string
+          description: >-
+            A description of the metric, defining how it is to be measured in
+            deployment
+          format: string
+        AdvertisingCampaignMetricGoal:
+          type: string
+          description: >-
+            A description of the target performance for the metric that can be
+            defined for different usage scenarios as appropriate
+          format: string
+        AdvertisingCampaignPerformanceRecord:
+          type: string
+          description: Maintains a record of the use and impact of the advertising campaign
+          format: string
+        AdvertisingCampaignProcedureInstanceReference:
+          type: string
+          description: Reference to the advertising campaign execution
+          format: object
+        AdvertisingCampaignExecutionPlan:
+          type: string
+          description: >-
+            The execution plan for the advertising campaign, including external
+            agencies employed, content development and execution tasks
+          format: string
+        EmployeeBusinessUnitReference:
+          type: string
+          description: >-
+            Reference to the business unit responsible for the campaign
+            execution
+          format: object
+        AdvertisingCampaignDuration:
+          type: string
+          description: The period over which the advertising is executed
+          format: string
+        AdvertisingCampaignProcedureResult:
+          type: string
+          description: >-
+            The result/impact of the overall advertising campaign event (can
+            refer to any detected up-tick in sales or servicing activity)
+          format: string
+      description: >-
+        Oversee the working of a business unit, assign work, manage against a
+        plan and troubleshoot issues within Advertising.
+    CreateAdvertisingCampaignManagementPlanRequest:
+      type: object
+      properties:
+        AdvertisingCampaignManagementPlan:
+          type: object
+          properties:
+            AdvertisingCampaignPortfolio:
+              type: string
+              description: "\r\n"
+              format: string
+            AdvertisingCampaignType:
+              type: string
+              description: "\r\n"
+              format: string
+            AdvertisingCampaignDescription:
+              type: string
+              description: "\r\n"
+              format: string
+            AdvertisingCampaignMetrics:
+              type: string
+              description: "\r\n"
+              format: string
+            AdvertisingCampaignMetricDefinition:
+              type: string
+              description: "\r\n"
+              format: string
+            AdvertisingCampaignPerformanceRecord:
+              type: string
+              description: "\r\n"
+              format: string
+            AdvertisingCampaignProcedureInstanceReference:
+              type: string
+              description: "\r\n"
+              format: object
+            AdvertisingCampaignExecutionPlan:
+              type: string
+              description: "\r\n"
+              format: string
+            EmployeeBusinessUnitReference:
+              type: string
+              description: "\r\n"
+              format: object
+            AdvertisingCampaignDuration:
+              type: string
+              description: "\r\n"
+              format: string
+            AdvertisingCampaignProcedureResult:
+              type: string
+              description: "\r\n"
+              format: string
+      description: 'Input: CrCR Create and invoke the advertising campaign management plan'
+    CreateAdvertisingCampaignManagementPlanResponse:
+      type: object
+      properties:
+        AdvertisingCampaignManagementPlan:
+          type: object
+          properties:
+            AdvertisingCampaignPortfolio:
+              type: string
+              description: "\r\n"
+              format: string
+            AdvertisingCampaignType:
+              type: string
+              description: "\r\n"
+              format: string
+            AdvertisingCampaignDescription:
+              type: string
+              description: "\r\n"
+              format: string
+            AdvertisingCampaignMetrics:
+              type: string
+              description: "\r\n"
+              format: string
+            AdvertisingCampaignMetricDefinition:
+              type: string
+              description: "\r\n"
+              format: string
+            AdvertisingCampaignPerformanceRecord:
+              type: string
+              description: "\r\n"
+              format: string
+            AdvertisingCampaignProcedureInstanceReference:
+              type: string
+              description: "\r\n"
+              format: object
+            AdvertisingCampaignExecutionPlan:
+              type: string
+              description: "\r\n"
+              format: string
+            EmployeeBusinessUnitReference:
+              type: string
+              description: "\r\n"
+              format: object
+            AdvertisingCampaignDuration:
+              type: string
+              description: "\r\n"
+              format: string
+      description: 'Output: CrCR Create and invoke the advertising campaign management plan'
+    RequestAdvertisingCampaignManagementPlanRequest:
+      type: object
+      properties:
+        AdvertisingCampaignManagementPlan:
+          type: object
+          properties:
+            AdvertisingCampaignPortfolio:
+              type: string
+              description: "\r\n"
+              format: string
+            AdvertisingCampaignType:
+              type: string
+              description: "\r\n"
+              format: string
+            AdvertisingCampaignDescription:
+              type: string
+              description: "\r\n"
+              format: string
+            AdvertisingCampaignMetrics:
+              type: string
+              description: "\r\n"
+              format: string
+            AdvertisingCampaignMetricDefinition:
+              type: string
+              description: "\r\n"
+              format: string
+      description: >-
+        Input: RqCR Request manual intervention in the campaign plan (e.g.
+        rework campaign priorities)
+    RequestAdvertisingCampaignManagementPlanResponse:
+      type: object
+      properties:
+        AdvertisingCampaignManagementPlan:
+          type: object
+          properties:
+            AdvertisingCampaignPortfolio:
+              type: string
+              description: "\r\n"
+              format: string
+            AdvertisingCampaignType:
+              type: string
+              description: "\r\n"
+              format: string
+            AdvertisingCampaignDescription:
+              type: string
+              description: "\r\n"
+              format: string
+            AdvertisingCampaignMetrics:
+              type: string
+              description: "\r\n"
+              format: string
+            AdvertisingCampaignMetricDefinition:
+              type: string
+              description: "\r\n"
+              format: string
+      description: >-
+        Output: RqCR Request manual intervention in the campaign plan (e.g.
+        rework campaign priorities)
+    RetrieveAdvertisingCampaignManagementPlanResponse:
+      type: object
+      properties:
+        AdvertisingCampaignManagementPlan:
+          type: object
+          properties:
+            AdvertisingCampaignPortfolio:
+              type: string
+              description: "\r\n"
+              format: string
+            AdvertisingCampaignType:
+              type: string
+              description: "\r\n"
+              format: string
+            AdvertisingCampaignDescription:
+              type: string
+              description: "\r\n"
+              format: string
+            AdvertisingCampaignMetrics:
+              type: string
+              description: "\r\n"
+              format: string
+            AdvertisingCampaignMetricDefinition:
+              type: string
+              description: "\r\n"
+              format: string
+            AdvertisingCampaignMetricGoal:
+              type: string
+              description: "\r\n"
+              format: string
+            AdvertisingCampaignPerformanceRecord:
+              type: string
+              description: "\r\n"
+              format: string
+            AdvertisingCampaignProcedureInstanceReference:
+              type: string
+              description: "\r\n"
+              format: object
+            AdvertisingCampaignExecutionPlan:
+              type: string
+              description: "\r\n"
+              format: string
+            EmployeeBusinessUnitReference:
+              type: string
+              description: "\r\n"
+              format: object
+            AdvertisingCampaignDuration:
+              type: string
+              description: "\r\n"
+              format: string
+            AdvertisingCampaignProcedureResult:
+              type: string
+              description: "\r\n"
+              format: string
+      description: >-
+        Output: ReCR Retrieve details about the advertising campaign management
+        plan
+    UpdateMarketTrackingRequest:
+      type: object
+      properties:
+        MarketTracking:
+          type: object
+          properties:
+            MarketTrackingWorkTaskType:
+              type: string
+              description: "\r\n"
+              format: string
+            GeneralMarketResearchDirectoryEntryInstanceReference:
+              type: string
+              description: "\r\n"
+              format: object
+            MarketTrackingWorkTaskWorkProducts:
+              type: string
+              description: "\r\n"
+              format: string
+            MarketTrackingWorkTaskResult:
+              type: string
+              description: "\r\n"
+              format: string
+            MarketTrackingWorkTaskDate-Time:
+              type: object
+              properties:
+                DateContent:
+                  type: string
+                  description: ''
+                  format: string
+              description: The date-time the market tracking task is performed
+      description: >-
+        Input: UpBQ Update details of the market tracking activity (e.g. change
+        source)
+    UpdateMarketTrackingResponse:
+      type: object
+      properties:
+        MarketTracking:
+          type: object
+          properties:
+            MarketTrackingWorkTaskType:
+              type: string
+              description: "\r\n"
+              format: string
+            GeneralMarketResearchDirectoryEntryInstanceReference:
+              type: string
+              description: "\r\n"
+              format: object
+            MarketTrackingWorkTaskWorkProducts:
+              type: string
+              description: "\r\n"
+              format: string
+            MarketTrackingWorkTaskResult:
+              type: string
+              description: "\r\n"
+              format: string
+            MarketTrackingWorkTaskDate-Time:
+              type: object
+              properties:
+                DateContent:
+                  type: string
+                  description: ''
+                  format: string
+              description: The date-time the market tracking task is performed
+      description: >-
+        Output: UpBQ Update details of the market tracking activity (e.g. change
+        source)
+    ExecuteMarketTrackingRequest:
+      type: object
+      properties:
+        MarketTracking:
+          type: object
+          properties:
+            MarketTrackingWorkTaskType:
+              type: string
+              description: "\r\n"
+              format: string
+            GeneralMarketResearchDirectoryEntryInstanceReference:
+              type: string
+              description: "\r\n"
+              format: object
+            MarketTrackingWorkTaskWorkProducts:
+              type: string
+              description: "\r\n"
+              format: string
+            MarketTrackingWorkTaskDate-Time:
+              type: object
+              properties:
+                DateContent:
+                  type: string
+                  description: ''
+                  format: string
+              description: The date-time the market tracking task is performed
+      description: >-
+        Input: ExBQ Execute an automated task for the tracking activity (e.g.
+        upload new data)
+    ExecuteMarketTrackingResponse:
+      type: object
+      properties:
+        MarketTracking:
+          type: object
+          properties:
+            MarketTrackingWorkTaskType:
+              type: string
+              description: "\r\n"
+              format: string
+            GeneralMarketResearchDirectoryEntryInstanceReference:
+              type: string
+              description: "\r\n"
+              format: object
+            MarketTrackingWorkTaskWorkProducts:
+              type: string
+              description: "\r\n"
+              format: string
+            MarketTrackingWorkTaskResult:
+              type: string
+              description: "\r\n"
+              format: string
+            MarketTrackingWorkTaskDate-Time:
+              type: object
+              properties:
+                DateContent:
+                  type: string
+                  description: ''
+                  format: string
+              description: The date-time the market tracking task is performed
+      description: >-
+        Output: ExBQ Execute an automated task for the tracking activity (e.g.
+        upload new data)
+    RequestMarketTrackingRequest:
+      type: object
+      properties:
+        MarketTracking:
+          type: object
+          properties:
+            MarketTrackingWorkTaskType:
+              type: string
+              description: "\r\n"
+              format: string
+            GeneralMarketResearchDirectoryEntryInstanceReference:
+              type: string
+              description: "\r\n"
+              format: object
+            MarketTrackingWorkTaskWorkProducts:
+              type: string
+              description: "\r\n"
+              format: string
+            MarketTrackingWorkTaskDate-Time:
+              type: object
+              properties:
+                DateContent:
+                  type: string
+                  description: ''
+                  format: string
+              description: The date-time the market tracking task is performed
+      description: >-
+        Input: RqBQ Request manual intervention in the market tracking (e.g.
+        request reworking of the analysis)
+    RequestMarketTrackingResponse:
+      type: object
+      properties:
+        MarketTracking:
+          type: object
+          properties:
+            MarketTrackingWorkTaskType:
+              type: string
+              description: "\r\n"
+              format: string
+            GeneralMarketResearchDirectoryEntryInstanceReference:
+              type: string
+              description: "\r\n"
+              format: object
+            MarketTrackingWorkTaskWorkProducts:
+              type: string
+              description: "\r\n"
+              format: string
+            MarketTrackingWorkTaskResult:
+              type: string
+              description: "\r\n"
+              format: string
+            MarketTrackingWorkTaskDate-Time:
+              type: object
+              properties:
+                DateContent:
+                  type: string
+                  description: ''
+                  format: string
+              description: The date-time the market tracking task is performed
+      description: >-
+        Output: RqBQ Request manual intervention in the market tracking (e.g.
+        request reworking of the analysis)
+    RetrieveMarketTrackingResponse:
+      type: object
+      properties:
+        MarketTracking:
+          type: object
+          properties:
+            MarketTrackingWorkTaskType:
+              type: string
+              description: "\r\n"
+              format: string
+            GeneralMarketResearchDirectoryEntryInstanceReference:
+              type: string
+              description: "\r\n"
+              format: object
+            MarketTrackingWorkTaskWorkProducts:
+              type: string
+              description: "\r\n"
+              format: string
+            MarketTrackingWorkTaskResult:
+              type: string
+              description: "\r\n"
+              format: string
+            MarketTrackingWorkTaskDate-Time:
+              type: object
+              properties:
+                DateContent:
+                  type: string
+                  description: ''
+                  format: string
+              description: The date-time the market tracking task is performed
+      description: 'Output: ReBQ Retrieve details about the market tracking activity'
+    CreatePerformanceAssessmentRequest:
+      type: object
+      properties:
+        PerformanceAssessment:
+          type: object
+          properties:
+            PerformanceAssessmentWorkTaskType:
+              type: string
+              description: "\r\n"
+              format: string
+            PerformanceAssessmentWorkTaskWorkProducts:
+              type: string
+              description: "\r\n"
+              format: string
+            PerformanceAssessmentWorkTaskDate-Time:
+              type: object
+              properties:
+                DateContent:
+                  type: string
+                  description: ''
+                  format: string
+              description: The date-time the market tracking task is performed
+      description: >-
+        Input: CrBQ Create a performance assessment of the advertising campaign
+        portfolio
+    CreatePerformanceAssessmentResponse:
+      type: object
+      properties:
+        PerformanceAssessment:
+          type: object
+          properties:
+            PerformanceAssessmentWorkTaskType:
+              type: string
+              description: "\r\n"
+              format: string
+            PerformanceAssessmentWorkTaskWorkProducts:
+              type: string
+              description: "\r\n"
+              format: string
+            PerformanceAssessmentWorkTaskResult:
+              type: string
+              description: "\r\n"
+              format: string
+            PerformanceAssessmentWorkTaskDate-Time:
+              type: object
+              properties:
+                DateContent:
+                  type: string
+                  description: ''
+                  format: string
+              description: The date-time the market tracking task is performed
+      description: >-
+        Output: CrBQ Create a performance assessment of the advertising campaign
+        portfolio
+    UpdatePerformanceAssessmentRequest:
+      type: object
+      properties:
+        PerformanceAssessment:
+          type: object
+          properties:
+            PerformanceAssessmentWorkTaskType:
+              type: string
+              description: "\r\n"
+              format: string
+            PerformanceAssessmentWorkTaskWorkProducts:
+              type: string
+              description: "\r\n"
+              format: string
+            PerformanceAssessmentWorkTaskResult:
+              type: string
+              description: "\r\n"
+              format: string
+            PerformanceAssessmentWorkTaskDate-Time:
+              type: object
+              properties:
+                DateContent:
+                  type: string
+                  description: ''
+                  format: string
+              description: The date-time the market tracking task is performed
+      description: >-
+        Input: UpBQ Update details of a advertising campaign portfolio
+        assessment
+    UpdatePerformanceAssessmentResponse:
+      type: object
+      properties:
+        PerformanceAssessment:
+          type: object
+          properties:
+            PerformanceAssessmentWorkTaskType:
+              type: string
+              description: "\r\n"
+              format: string
+            PerformanceAssessmentWorkTaskWorkProducts:
+              type: string
+              description: "\r\n"
+              format: string
+            PerformanceAssessmentWorkTaskResult:
+              type: string
+              description: "\r\n"
+              format: string
+            PerformanceAssessmentWorkTaskDate-Time:
+              type: object
+              properties:
+                DateContent:
+                  type: string
+                  description: ''
+                  format: string
+              description: The date-time the market tracking task is performed
+      description: >-
+        Output: UpBQ Update details of a advertising campaign portfolio
+        assessment
+    ExecutePerformanceAssessmentRequest:
+      type: object
+      properties:
+        PerformanceAssessment:
+          type: object
+          properties:
+            PerformanceAssessmentWorkTaskType:
+              type: string
+              description: "\r\n"
+              format: string
+            PerformanceAssessmentWorkTaskWorkProducts:
+              type: string
+              description: "\r\n"
+              format: string
+            PerformanceAssessmentWorkTaskDate-Time:
+              type: object
+              properties:
+                DateContent:
+                  type: string
+                  description: ''
+                  format: string
+              description: The date-time the market tracking task is performed
+      description: >-
+        Input: ExBQ Execute an automated action for a performance assessment
+        (e.g. trigger assessment report)
+    ExecutePerformanceAssessmentResponse:
+      type: object
+      properties:
+        PerformanceAssessment:
+          type: object
+          properties:
+            PerformanceAssessmentWorkTaskType:
+              type: string
+              description: "\r\n"
+              format: string
+            PerformanceAssessmentWorkTaskWorkProducts:
+              type: string
+              description: "\r\n"
+              format: string
+            PerformanceAssessmentWorkTaskResult:
+              type: string
+              description: "\r\n"
+              format: string
+            PerformanceAssessmentWorkTaskDate-Time:
+              type: object
+              properties:
+                DateContent:
+                  type: string
+                  description: ''
+                  format: string
+              description: The date-time the market tracking task is performed
+      description: >-
+        Output: ExBQ Execute an automated action for a performance assessment
+        (e.g. trigger assessment report)
+    RequestPerformanceAssessmentRequest:
+      type: object
+      properties:
+        PerformanceAssessment:
+          type: object
+          properties:
+            PerformanceAssessmentWorkTaskType:
+              type: string
+              description: "\r\n"
+              format: string
+            PerformanceAssessmentWorkTaskWorkProducts:
+              type: string
+              description: "\r\n"
+              format: string
+            PerformanceAssessmentWorkTaskDate-Time:
+              type: object
+              properties:
+                DateContent:
+                  type: string
+                  description: ''
+                  format: string
+              description: The date-time the market tracking task is performed
+      description: >-
+        Input: RqBQ Request manual intervention to a performance assessment
+        (e.g. request specific analysis)
+    RequestPerformanceAssessmentResponse:
+      type: object
+      properties:
+        PerformanceAssessment:
+          type: object
+          properties:
+            PerformanceAssessmentWorkTaskType:
+              type: string
+              description: "\r\n"
+              format: string
+            PerformanceAssessmentWorkTaskWorkProducts:
+              type: string
+              description: "\r\n"
+              format: string
+            PerformanceAssessmentWorkTaskResult:
+              type: string
+              description: "\r\n"
+              format: string
+            PerformanceAssessmentWorkTaskDate-Time:
+              type: object
+              properties:
+                DateContent:
+                  type: string
+                  description: ''
+                  format: string
+              description: The date-time the market tracking task is performed
+      description: >-
+        Output: RqBQ Request manual intervention to a performance assessment
+        (e.g. request specific analysis)
+    RetrievePerformanceAssessmentResponse:
+      type: object
+      properties:
+        PerformanceAssessment:
+          type: object
+          properties:
+            PerformanceAssessmentWorkTaskType:
+              type: string
+              description: "\r\n"
+              format: string
+            PerformanceAssessmentWorkTaskWorkProducts:
+              type: string
+              description: "\r\n"
+              format: string
+            PerformanceAssessmentWorkTaskResult:
+              type: string
+              description: "\r\n"
+              format: string
+            PerformanceAssessmentWorkTaskDate-Time:
+              type: object
+              properties:
+                DateContent:
+                  type: string
+                  description: ''
+                  format: string
+              description: The date-time the market tracking task is performed
+      description: >-
+        Output: ReBQ Retrieve details about advertising campaign performance
+        assessment activity
+    RetrieveCampaignDirectionResponse:
+      type: object
+      properties:
+        CampaignDirection:
+          type: object
+          properties:
+            AdvertisingCampaignDevelopmentSchedule:
+              type: string
+              description: "\r\n"
+              format: string
+            AdvertisingCampaignExecutionSchedule:
+              type: string
+              description: "\r\n"
+              format: string
+      description: >-
+        Output: ReBQ Retrieve details about advertising campaign design and
+        execution direction and scheduling activities
+  parameters:
+    advertisingid:
+      name: advertisingid
+      in: path
+      required: true
+      style: simple
+      schema:
+        type: string
+    markettrackingid:
+      name: markettrackingid
+      in: path
+      required: true
+      style: simple
+      schema:
+        type: string
+    performanceassessmentid:
+      name: performanceassessmentid
+      in: path
+      required: true
+      style: simple
+      schema:
+        type: string
+    campaigndirectionid:
+      name: campaigndirectionid
+      in: path
+      required: true
+      style: simple
+      schema:
+        type: string
+  responses:
+    BadRequest:
+      description: BadRequest
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              status_code:
+                type: string
+                format: string
+              status:
+                type: string
+                format: string
+              message:
+                type: string
+                format: string
+            description: Status Attributes
+    Unauthorized:
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              status_code:
+                type: string
+                format: string
+              status:
+                type: string
+                format: string
+              message:
+                type: string
+                format: string
+            description: Status Attributes
+    Forbidden:
+      description: Forbidden
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              status_code:
+                type: string
+                format: string
+              status:
+                type: string
+                format: string
+              message:
+                type: string
+                format: string
+            description: Status Attributes
+    NotFound:
+      description: NotFound
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              status_code:
+                type: string
+                format: string
+              status:
+                type: string
+                format: string
+              message:
+                type: string
+                format: string
+            description: Status Attributes
+    TooManyRequests:
+      description: TooManyRequests
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              status_code:
+                type: string
+                format: string
+              status:
+                type: string
+                format: string
+              message:
+                type: string
+                format: string
+            description: Status Attributes
+    InternalServerError:
+      description: InternalServerError
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              status_code:
+                type: string
+                format: string
+              status:
+                type: string
+                format: string
+              message:
+                type: string
+                format: string
+            description: Status Attributes
+    CreateAdvertisingCampaignManagementPlanResponse:
+      description: CreateAdvertisingCampaignManagementPlanResponse
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              AdvertisingCampaignManagementPlan:
+                type: object
+                properties:
+                  AdvertisingCampaignPortfolio:
+                    type: string
+                    description: "\r\n"
+                    format: string
+                  AdvertisingCampaignType:
+                    type: string
+                    description: "\r\n"
+                    format: string
+                  AdvertisingCampaignDescription:
+                    type: string
+                    description: "\r\n"
+                    format: string
+                  AdvertisingCampaignMetrics:
+                    type: string
+                    description: "\r\n"
+                    format: string
+                  AdvertisingCampaignMetricDefinition:
+                    type: string
+                    description: "\r\n"
+                    format: string
+                  AdvertisingCampaignPerformanceRecord:
+                    type: string
+                    description: "\r\n"
+                    format: string
+                  AdvertisingCampaignProcedureInstanceReference:
+                    type: string
+                    description: "\r\n"
+                    format: object
+                  AdvertisingCampaignExecutionPlan:
+                    type: string
+                    description: "\r\n"
+                    format: string
+                  EmployeeBusinessUnitReference:
+                    type: string
+                    description: "\r\n"
+                    format: object
+                  AdvertisingCampaignDuration:
+                    type: string
+                    description: "\r\n"
+                    format: string
+            description: >-
+              Output: CrCR Create and invoke the advertising campaign management
+              plan
+    AdvertisingCampaignManagementPlan:
+      description: AdvertisingCampaignManagementPlan
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              AdvertisingCampaignPortfolio:
+                type: string
+                description: >-
+                  The collection of advertising campaigns that is used to assess
+                  performance and coverage and direct development and execution
+                  activity
+                format: string
+              AdvertisingCampaignType:
+                type: string
+                description: >-
+                  The type of advertising campaign (e.g. media, mailshot,
+                  web-based)
+                format: string
+              AdvertisingCampaignDescription:
+                type: string
+                description: >-
+                  A description of the campaign that clarifies the content and
+                  media to be used in the advertising campaign and outlines the
+                  target audience
+                format: string
+              AdvertisingCampaignMetrics:
+                type: string
+                description: >-
+                  Metrics that are defined to assess the target and actual
+                  impact of the campaign
+                format: string
+              AdvertisingCampaignMetricDefinition:
+                type: string
+                description: >-
+                  A description of the metric, defining how it is to be measured
+                  in deployment
+                format: string
+              AdvertisingCampaignMetricGoal:
+                type: string
+                description: >-
+                  A description of the target performance for the metric that
+                  can be defined for different usage scenarios as appropriate
+                format: string
+              AdvertisingCampaignPerformanceRecord:
+                type: string
+                description: >-
+                  Maintains a record of the use and impact of the advertising
+                  campaign
+                format: string
+              AdvertisingCampaignProcedureInstanceReference:
+                type: string
+                description: Reference to the advertising campaign execution
+                format: object
+              AdvertisingCampaignExecutionPlan:
+                type: string
+                description: >-
+                  The execution plan for the advertising campaign, including
+                  external agencies employed, content development and execution
+                  tasks
+                format: string
+              EmployeeBusinessUnitReference:
+                type: string
+                description: >-
+                  Reference to the business unit responsible for the campaign
+                  execution
+                format: object
+              AdvertisingCampaignDuration:
+                type: string
+                description: The period over which the advertising is executed
+                format: string
+              AdvertisingCampaignProcedureResult:
+                type: string
+                description: >-
+                  The result/impact of the overall advertising campaign event
+                  (can refer to any detected up-tick in sales or servicing
+                  activity)
+                format: string
+            description: >-
+              Oversee the working of a business unit, assign work, manage
+              against a plan and troubleshoot issues within Advertising.
+    RequestAdvertisingCampaignManagementPlanResponse:
+      description: RequestAdvertisingCampaignManagementPlanResponse
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              AdvertisingCampaignManagementPlan:
+                type: object
+                properties:
+                  AdvertisingCampaignPortfolio:
+                    type: string
+                    description: "\r\n"
+                    format: string
+                  AdvertisingCampaignType:
+                    type: string
+                    description: "\r\n"
+                    format: string
+                  AdvertisingCampaignDescription:
+                    type: string
+                    description: "\r\n"
+                    format: string
+                  AdvertisingCampaignMetrics:
+                    type: string
+                    description: "\r\n"
+                    format: string
+                  AdvertisingCampaignMetricDefinition:
+                    type: string
+                    description: "\r\n"
+                    format: string
+            description: >-
+              Output: RqCR Request manual intervention in the campaign plan
+              (e.g. rework campaign priorities)
+    RetrieveAdvertisingCampaignManagementPlanResponse:
+      description: RetrieveAdvertisingCampaignManagementPlanResponse
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              AdvertisingCampaignManagementPlan:
+                type: object
+                properties:
+                  AdvertisingCampaignPortfolio:
+                    type: string
+                    description: "\r\n"
+                    format: string
+                  AdvertisingCampaignType:
+                    type: string
+                    description: "\r\n"
+                    format: string
+                  AdvertisingCampaignDescription:
+                    type: string
+                    description: "\r\n"
+                    format: string
+                  AdvertisingCampaignMetrics:
+                    type: string
+                    description: "\r\n"
+                    format: string
+                  AdvertisingCampaignMetricDefinition:
+                    type: string
+                    description: "\r\n"
+                    format: string
+                  AdvertisingCampaignMetricGoal:
+                    type: string
+                    description: "\r\n"
+                    format: string
+                  AdvertisingCampaignPerformanceRecord:
+                    type: string
+                    description: "\r\n"
+                    format: string
+                  AdvertisingCampaignProcedureInstanceReference:
+                    type: string
+                    description: "\r\n"
+                    format: object
+                  AdvertisingCampaignExecutionPlan:
+                    type: string
+                    description: "\r\n"
+                    format: string
+                  EmployeeBusinessUnitReference:
+                    type: string
+                    description: "\r\n"
+                    format: object
+                  AdvertisingCampaignDuration:
+                    type: string
+                    description: "\r\n"
+                    format: string
+                  AdvertisingCampaignProcedureResult:
+                    type: string
+                    description: "\r\n"
+                    format: string
+            description: >-
+              Output: ReCR Retrieve details about the advertising campaign
+              management plan
+    UpdateMarketTrackingResponse:
+      description: UpdateMarketTrackingResponse
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              MarketTracking:
+                type: object
+                properties:
+                  MarketTrackingWorkTaskType:
+                    type: string
+                    description: "\r\n"
+                    format: string
+                  GeneralMarketResearchDirectoryEntryInstanceReference:
+                    type: string
+                    description: "\r\n"
+                    format: object
+                  MarketTrackingWorkTaskWorkProducts:
+                    type: string
+                    description: "\r\n"
+                    format: string
+                  MarketTrackingWorkTaskResult:
+                    type: string
+                    description: "\r\n"
+                    format: string
+                  MarketTrackingWorkTaskDate-Time:
+                    type: object
+                    properties:
+                      DateContent:
+                        type: string
+                        description: ''
+                        format: string
+                    description: The date-time the market tracking task is performed
+            description: >-
+              Output: UpBQ Update details of the market tracking activity (e.g.
+              change source)
+    ExecuteMarketTrackingResponse:
+      description: ExecuteMarketTrackingResponse
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              MarketTracking:
+                type: object
+                properties:
+                  MarketTrackingWorkTaskType:
+                    type: string
+                    description: "\r\n"
+                    format: string
+                  GeneralMarketResearchDirectoryEntryInstanceReference:
+                    type: string
+                    description: "\r\n"
+                    format: object
+                  MarketTrackingWorkTaskWorkProducts:
+                    type: string
+                    description: "\r\n"
+                    format: string
+                  MarketTrackingWorkTaskResult:
+                    type: string
+                    description: "\r\n"
+                    format: string
+                  MarketTrackingWorkTaskDate-Time:
+                    type: object
+                    properties:
+                      DateContent:
+                        type: string
+                        description: ''
+                        format: string
+                    description: The date-time the market tracking task is performed
+            description: >-
+              Output: ExBQ Execute an automated task for the tracking activity
+              (e.g. upload new data)
+    RequestMarketTrackingResponse:
+      description: RequestMarketTrackingResponse
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              MarketTracking:
+                type: object
+                properties:
+                  MarketTrackingWorkTaskType:
+                    type: string
+                    description: "\r\n"
+                    format: string
+                  GeneralMarketResearchDirectoryEntryInstanceReference:
+                    type: string
+                    description: "\r\n"
+                    format: object
+                  MarketTrackingWorkTaskWorkProducts:
+                    type: string
+                    description: "\r\n"
+                    format: string
+                  MarketTrackingWorkTaskResult:
+                    type: string
+                    description: "\r\n"
+                    format: string
+                  MarketTrackingWorkTaskDate-Time:
+                    type: object
+                    properties:
+                      DateContent:
+                        type: string
+                        description: ''
+                        format: string
+                    description: The date-time the market tracking task is performed
+            description: >-
+              Output: RqBQ Request manual intervention in the market tracking
+              (e.g. request reworking of the analysis)
+    RetrieveMarketTrackingResponse:
+      description: RetrieveMarketTrackingResponse
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              MarketTracking:
+                type: object
+                properties:
+                  MarketTrackingWorkTaskType:
+                    type: string
+                    description: "\r\n"
+                    format: string
+                  GeneralMarketResearchDirectoryEntryInstanceReference:
+                    type: string
+                    description: "\r\n"
+                    format: object
+                  MarketTrackingWorkTaskWorkProducts:
+                    type: string
+                    description: "\r\n"
+                    format: string
+                  MarketTrackingWorkTaskResult:
+                    type: string
+                    description: "\r\n"
+                    format: string
+                  MarketTrackingWorkTaskDate-Time:
+                    type: object
+                    properties:
+                      DateContent:
+                        type: string
+                        description: ''
+                        format: string
+                    description: The date-time the market tracking task is performed
+            description: 'Output: ReBQ Retrieve details about the market tracking activity'
+    CreatePerformanceAssessmentResponse:
+      description: CreatePerformanceAssessmentResponse
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              PerformanceAssessment:
+                type: object
+                properties:
+                  PerformanceAssessmentWorkTaskType:
+                    type: string
+                    description: "\r\n"
+                    format: string
+                  PerformanceAssessmentWorkTaskWorkProducts:
+                    type: string
+                    description: "\r\n"
+                    format: string
+                  PerformanceAssessmentWorkTaskResult:
+                    type: string
+                    description: "\r\n"
+                    format: string
+                  PerformanceAssessmentWorkTaskDate-Time:
+                    type: object
+                    properties:
+                      DateContent:
+                        type: string
+                        description: ''
+                        format: string
+                    description: The date-time the market tracking task is performed
+            description: >-
+              Output: CrBQ Create a performance assessment of the advertising
+              campaign portfolio
+    UpdatePerformanceAssessmentResponse:
+      description: UpdatePerformanceAssessmentResponse
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              PerformanceAssessment:
+                type: object
+                properties:
+                  PerformanceAssessmentWorkTaskType:
+                    type: string
+                    description: "\r\n"
+                    format: string
+                  PerformanceAssessmentWorkTaskWorkProducts:
+                    type: string
+                    description: "\r\n"
+                    format: string
+                  PerformanceAssessmentWorkTaskResult:
+                    type: string
+                    description: "\r\n"
+                    format: string
+                  PerformanceAssessmentWorkTaskDate-Time:
+                    type: object
+                    properties:
+                      DateContent:
+                        type: string
+                        description: ''
+                        format: string
+                    description: The date-time the market tracking task is performed
+            description: >-
+              Output: UpBQ Update details of a advertising campaign portfolio
+              assessment
+    ExecutePerformanceAssessmentResponse:
+      description: ExecutePerformanceAssessmentResponse
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              PerformanceAssessment:
+                type: object
+                properties:
+                  PerformanceAssessmentWorkTaskType:
+                    type: string
+                    description: "\r\n"
+                    format: string
+                  PerformanceAssessmentWorkTaskWorkProducts:
+                    type: string
+                    description: "\r\n"
+                    format: string
+                  PerformanceAssessmentWorkTaskResult:
+                    type: string
+                    description: "\r\n"
+                    format: string
+                  PerformanceAssessmentWorkTaskDate-Time:
+                    type: object
+                    properties:
+                      DateContent:
+                        type: string
+                        description: ''
+                        format: string
+                    description: The date-time the market tracking task is performed
+            description: >-
+              Output: ExBQ Execute an automated action for a performance
+              assessment (e.g. trigger assessment report)
+    RequestPerformanceAssessmentResponse:
+      description: RequestPerformanceAssessmentResponse
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              PerformanceAssessment:
+                type: object
+                properties:
+                  PerformanceAssessmentWorkTaskType:
+                    type: string
+                    description: "\r\n"
+                    format: string
+                  PerformanceAssessmentWorkTaskWorkProducts:
+                    type: string
+                    description: "\r\n"
+                    format: string
+                  PerformanceAssessmentWorkTaskResult:
+                    type: string
+                    description: "\r\n"
+                    format: string
+                  PerformanceAssessmentWorkTaskDate-Time:
+                    type: object
+                    properties:
+                      DateContent:
+                        type: string
+                        description: ''
+                        format: string
+                    description: The date-time the market tracking task is performed
+            description: >-
+              Output: RqBQ Request manual intervention to a performance
+              assessment (e.g. request specific analysis)
+    RetrievePerformanceAssessmentResponse:
+      description: RetrievePerformanceAssessmentResponse
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              PerformanceAssessment:
+                type: object
+                properties:
+                  PerformanceAssessmentWorkTaskType:
+                    type: string
+                    description: "\r\n"
+                    format: string
+                  PerformanceAssessmentWorkTaskWorkProducts:
+                    type: string
+                    description: "\r\n"
+                    format: string
+                  PerformanceAssessmentWorkTaskResult:
+                    type: string
+                    description: "\r\n"
+                    format: string
+                  PerformanceAssessmentWorkTaskDate-Time:
+                    type: object
+                    properties:
+                      DateContent:
+                        type: string
+                        description: ''
+                        format: string
+                    description: The date-time the market tracking task is performed
+            description: >-
+              Output: ReBQ Retrieve details about advertising campaign
+              performance assessment activity
+    CampaignDirection:
+      description: CampaignDirection
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              AdvertisingCampaignDevelopmentSchedule:
+                type: string
+                description: >-
+                  Schedule of planned and actual advertising campaign design
+                  development and refinement activity
+                format: string
+              AdvertisingCampaignExecutionSchedule:
+                type: string
+                description: >-
+                  Schedule of planned and actual customer campaign execution
+                  activities
+                format: string
+            description: >-
+              A collection of one or more responsibilities or tasks under
+              management
+
+
+              Examples: Relationship development, Troubleshooting
+    RetrieveCampaignDirectionResponse:
+      description: RetrieveCampaignDirectionResponse
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              CampaignDirection:
+                type: object
+                properties:
+                  AdvertisingCampaignDevelopmentSchedule:
+                    type: string
+                    description: "\r\n"
+                    format: string
+                  AdvertisingCampaignExecutionSchedule:
+                    type: string
+                    description: "\r\n"
+                    format: string
+            description: >-
+              Output: ReBQ Retrieve details about advertising campaign design
+              and execution direction and scheduling activities
+  requestBodies:
+    CreateAdvertisingCampaignManagementPlanRequest:
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              AdvertisingCampaignManagementPlan:
+                type: object
+                properties:
+                  AdvertisingCampaignPortfolio:
+                    type: string
+                    description: "\r\n"
+                    format: string
+                  AdvertisingCampaignType:
+                    type: string
+                    description: "\r\n"
+                    format: string
+                  AdvertisingCampaignDescription:
+                    type: string
+                    description: "\r\n"
+                    format: string
+                  AdvertisingCampaignMetrics:
+                    type: string
+                    description: "\r\n"
+                    format: string
+                  AdvertisingCampaignMetricDefinition:
+                    type: string
+                    description: "\r\n"
+                    format: string
+                  AdvertisingCampaignPerformanceRecord:
+                    type: string
+                    description: "\r\n"
+                    format: string
+                  AdvertisingCampaignProcedureInstanceReference:
+                    type: string
+                    description: "\r\n"
+                    format: object
+                  AdvertisingCampaignExecutionPlan:
+                    type: string
+                    description: "\r\n"
+                    format: string
+                  EmployeeBusinessUnitReference:
+                    type: string
+                    description: "\r\n"
+                    format: object
+                  AdvertisingCampaignDuration:
+                    type: string
+                    description: "\r\n"
+                    format: string
+                  AdvertisingCampaignProcedureResult:
+                    type: string
+                    description: "\r\n"
+                    format: string
+            description: >-
+              Input: CrCR Create and invoke the advertising campaign management
+              plan
+      required: true
+    AdvertisingCampaignManagementPlan:
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              AdvertisingCampaignPortfolio:
+                type: string
+                description: >-
+                  The collection of advertising campaigns that is used to assess
+                  performance and coverage and direct development and execution
+                  activity
+                format: string
+              AdvertisingCampaignType:
+                type: string
+                description: >-
+                  The type of advertising campaign (e.g. media, mailshot,
+                  web-based)
+                format: string
+              AdvertisingCampaignDescription:
+                type: string
+                description: >-
+                  A description of the campaign that clarifies the content and
+                  media to be used in the advertising campaign and outlines the
+                  target audience
+                format: string
+              AdvertisingCampaignMetrics:
+                type: string
+                description: >-
+                  Metrics that are defined to assess the target and actual
+                  impact of the campaign
+                format: string
+              AdvertisingCampaignMetricDefinition:
+                type: string
+                description: >-
+                  A description of the metric, defining how it is to be measured
+                  in deployment
+                format: string
+              AdvertisingCampaignMetricGoal:
+                type: string
+                description: >-
+                  A description of the target performance for the metric that
+                  can be defined for different usage scenarios as appropriate
+                format: string
+              AdvertisingCampaignPerformanceRecord:
+                type: string
+                description: >-
+                  Maintains a record of the use and impact of the advertising
+                  campaign
+                format: string
+              AdvertisingCampaignProcedureInstanceReference:
+                type: string
+                description: Reference to the advertising campaign execution
+                format: object
+              AdvertisingCampaignExecutionPlan:
+                type: string
+                description: >-
+                  The execution plan for the advertising campaign, including
+                  external agencies employed, content development and execution
+                  tasks
+                format: string
+              EmployeeBusinessUnitReference:
+                type: string
+                description: >-
+                  Reference to the business unit responsible for the campaign
+                  execution
+                format: object
+              AdvertisingCampaignDuration:
+                type: string
+                description: The period over which the advertising is executed
+                format: string
+              AdvertisingCampaignProcedureResult:
+                type: string
+                description: >-
+                  The result/impact of the overall advertising campaign event
+                  (can refer to any detected up-tick in sales or servicing
+                  activity)
+                format: string
+            description: >-
+              Oversee the working of a business unit, assign work, manage
+              against a plan and troubleshoot issues within Advertising.
+      required: true
+    RequestAdvertisingCampaignManagementPlanRequest:
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              AdvertisingCampaignManagementPlan:
+                type: object
+                properties:
+                  AdvertisingCampaignPortfolio:
+                    type: string
+                    description: "\r\n"
+                    format: string
+                  AdvertisingCampaignType:
+                    type: string
+                    description: "\r\n"
+                    format: string
+                  AdvertisingCampaignDescription:
+                    type: string
+                    description: "\r\n"
+                    format: string
+                  AdvertisingCampaignMetrics:
+                    type: string
+                    description: "\r\n"
+                    format: string
+                  AdvertisingCampaignMetricDefinition:
+                    type: string
+                    description: "\r\n"
+                    format: string
+            description: >-
+              Input: RqCR Request manual intervention in the campaign plan (e.g.
+              rework campaign priorities)
+      required: true
+    UpdateMarketTrackingRequest:
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              MarketTracking:
+                type: object
+                properties:
+                  MarketTrackingWorkTaskType:
+                    type: string
+                    description: "\r\n"
+                    format: string
+                  GeneralMarketResearchDirectoryEntryInstanceReference:
+                    type: string
+                    description: "\r\n"
+                    format: object
+                  MarketTrackingWorkTaskWorkProducts:
+                    type: string
+                    description: "\r\n"
+                    format: string
+                  MarketTrackingWorkTaskResult:
+                    type: string
+                    description: "\r\n"
+                    format: string
+                  MarketTrackingWorkTaskDate-Time:
+                    type: object
+                    properties:
+                      DateContent:
+                        type: string
+                        description: ''
+                        format: string
+                    description: The date-time the market tracking task is performed
+            description: >-
+              Input: UpBQ Update details of the market tracking activity (e.g.
+              change source)
+      required: true
+    ExecuteMarketTrackingRequest:
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              MarketTracking:
+                type: object
+                properties:
+                  MarketTrackingWorkTaskType:
+                    type: string
+                    description: "\r\n"
+                    format: string
+                  GeneralMarketResearchDirectoryEntryInstanceReference:
+                    type: string
+                    description: "\r\n"
+                    format: object
+                  MarketTrackingWorkTaskWorkProducts:
+                    type: string
+                    description: "\r\n"
+                    format: string
+                  MarketTrackingWorkTaskDate-Time:
+                    type: object
+                    properties:
+                      DateContent:
+                        type: string
+                        description: ''
+                        format: string
+                    description: The date-time the market tracking task is performed
+            description: >-
+              Input: ExBQ Execute an automated task for the tracking activity
+              (e.g. upload new data)
+      required: true
+    RequestMarketTrackingRequest:
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              MarketTracking:
+                type: object
+                properties:
+                  MarketTrackingWorkTaskType:
+                    type: string
+                    description: "\r\n"
+                    format: string
+                  GeneralMarketResearchDirectoryEntryInstanceReference:
+                    type: string
+                    description: "\r\n"
+                    format: object
+                  MarketTrackingWorkTaskWorkProducts:
+                    type: string
+                    description: "\r\n"
+                    format: string
+                  MarketTrackingWorkTaskDate-Time:
+                    type: object
+                    properties:
+                      DateContent:
+                        type: string
+                        description: ''
+                        format: string
+                    description: The date-time the market tracking task is performed
+            description: >-
+              Input: RqBQ Request manual intervention in the market tracking
+              (e.g. request reworking of the analysis)
+      required: true
+    CreatePerformanceAssessmentRequest:
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              PerformanceAssessment:
+                type: object
+                properties:
+                  PerformanceAssessmentWorkTaskType:
+                    type: string
+                    description: "\r\n"
+                    format: string
+                  PerformanceAssessmentWorkTaskWorkProducts:
+                    type: string
+                    description: "\r\n"
+                    format: string
+                  PerformanceAssessmentWorkTaskDate-Time:
+                    type: object
+                    properties:
+                      DateContent:
+                        type: string
+                        description: ''
+                        format: string
+                    description: The date-time the market tracking task is performed
+            description: >-
+              Input: CrBQ Create a performance assessment of the advertising
+              campaign portfolio
+      required: true
+    UpdatePerformanceAssessmentRequest:
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              PerformanceAssessment:
+                type: object
+                properties:
+                  PerformanceAssessmentWorkTaskType:
+                    type: string
+                    description: "\r\n"
+                    format: string
+                  PerformanceAssessmentWorkTaskWorkProducts:
+                    type: string
+                    description: "\r\n"
+                    format: string
+                  PerformanceAssessmentWorkTaskResult:
+                    type: string
+                    description: "\r\n"
+                    format: string
+                  PerformanceAssessmentWorkTaskDate-Time:
+                    type: object
+                    properties:
+                      DateContent:
+                        type: string
+                        description: ''
+                        format: string
+                    description: The date-time the market tracking task is performed
+            description: >-
+              Input: UpBQ Update details of a advertising campaign portfolio
+              assessment
+      required: true
+    ExecutePerformanceAssessmentRequest:
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              PerformanceAssessment:
+                type: object
+                properties:
+                  PerformanceAssessmentWorkTaskType:
+                    type: string
+                    description: "\r\n"
+                    format: string
+                  PerformanceAssessmentWorkTaskWorkProducts:
+                    type: string
+                    description: "\r\n"
+                    format: string
+                  PerformanceAssessmentWorkTaskDate-Time:
+                    type: object
+                    properties:
+                      DateContent:
+                        type: string
+                        description: ''
+                        format: string
+                    description: The date-time the market tracking task is performed
+            description: >-
+              Input: ExBQ Execute an automated action for a performance
+              assessment (e.g. trigger assessment report)
+      required: true
+    RequestPerformanceAssessmentRequest:
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              PerformanceAssessment:
+                type: object
+                properties:
+                  PerformanceAssessmentWorkTaskType:
+                    type: string
+                    description: "\r\n"
+                    format: string
+                  PerformanceAssessmentWorkTaskWorkProducts:
+                    type: string
+                    description: "\r\n"
+                    format: string
+                  PerformanceAssessmentWorkTaskDate-Time:
+                    type: object
+                    properties:
+                      DateContent:
+                        type: string
+                        description: ''
+                        format: string
+                    description: The date-time the market tracking task is performed
+            description: >-
+              Input: RqBQ Request manual intervention to a performance
+              assessment (e.g. request specific analysis)
+      required: true
+    CampaignDirection:
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              AdvertisingCampaignDevelopmentSchedule:
+                type: string
+                description: >-
+                  Schedule of planned and actual advertising campaign design
+                  development and refinement activity
+                format: string
+              AdvertisingCampaignExecutionSchedule:
+                type: string
+                description: >-
+                  Schedule of planned and actual customer campaign execution
+                  activities
+                format: string
+            description: >-
+              A collection of one or more responsibilities or tasks under
+              management
+
+
+              Examples: Relationship development, Troubleshooting
+      required: true
