@@ -1,0 +1,42 @@
+openapi: 3.0.0
+info:
+  title: Example API with Nested References
+  version: 1.0.0
+paths:
+  /user:
+    get:
+      summary: Get a user
+      responses:
+        '200':
+          description: A user object
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+components:
+  schemas:
+    User:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        address:
+          $ref: '#/components/schemas/Address'  # Nested reference
+    Address:
+      type: object
+      properties:
+        street:
+          type: string
+        city:
+          type: string
+        country:
+          $ref: '#/components/schemas/Country'  # Nested reference
+    Country:
+      type: object
+      properties:
+        code:
+          type: string
+        name:
+          type: string
