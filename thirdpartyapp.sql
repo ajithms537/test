@@ -1,0 +1,11 @@
+CREATE DATABASE IF NOT EXISTS `sample_db` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+USE `sample_db`;
+
+DROP TABLE IF EXISTS `department`;
+
+CREATE TABLE `department` (
+  `dept_id` INT AUTO_INCREMENT NOT NULL, 
+  `dept_name` VARCHAR(255) NOT NULL,
+  `location` VARCHAR(255) DEFAULT NULL,
+  PRIMARY KEY (`dept_id`)
+);
